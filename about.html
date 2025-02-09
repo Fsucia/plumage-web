@@ -1,284 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plumage</title>
-  <style>
-        :root {
-            --deep-blue: #1B4B5A;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Times New Roman", Times, serif;
-            background-color: #fff;
-        }
-
-        /* Header styling */
-        .header {
-            position: relative;
-            height: 350px;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .header-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('/images/NewHeaderHorizontal.jpg');
-            background-size: 100% 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            z-index: 1;
-        }
-
-        .header h1 {
-            color: white;
-            font-size: 72px;
-            font-family: "Times New Roman", Times, serif;
-            position: absolute;
-            bottom: 80px;
-            left: 40px;
-            margin: 0;
-            z-index: 2;
-            font-weight: normal;
-            text-transform: none;
-        }
-
-        /* Navigation styling */
-        .nav-container {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background: linear-gradient(to bottom, rgba(27,75,90,0.8), rgba(27,75,90,1));
-            z-index: 2;
-        }
-
-        .nav-bar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            padding: 0 15px;
-            border-right: 1px solid white;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: normal;
-            text-transform: none;
-        }
-
-        .nav-bar a:last-child {
-            border-right: none;
-        }
-
-        .white-line {
-            height: 2px;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Issue integration area */
-        #magazine-container {
-            width: 100%;
-            padding: 2rem 0;
-            background-color: #fff;
-        }
-
-        #magazine {
-            width: 800px;
-            height: 500px;
-            margin: 0 auto;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border: 1px solid #ddd;
-            background: white;
-        }
-
-        .content {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        .issue-info {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .issue-info h2 {
-            font-family: "Times New Roman", Times, serif;
-            font-size: 36px;
-            color: var(--deep-blue);
-            margin-bottom: 0.5rem;
-            font-style: italic;
-            font-weight: normal;
-        }
-
-        .issue-date {
-            font-family: "Times New Roman", Times, serif;
-            font-style: italic;
-            color: #666;
-            font-size: 18px;
-        }
-
-        .editor-statement {
-            font-family: "Times New Roman", Times, serif;
-            font-size: 24px;
-            line-height: 1.4;
-            color: var(--deep-blue);
-            margin: 2rem 0;
-            text-align: left;
-            max-width: 800px;
-            margin: 2rem auto;
-            font-weight: normal;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature-card {
-            position: relative;
-            background: #fff;
-            padding: 1rem;
-        }
-
-        .feature-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .feature-card h3 {
-            font-family: "Times New Roman", Times, serif;
-            margin: 1rem 0;
-            font-size: 24px;
-            color: var(--deep-blue);
-            font-weight: normal;
-        }
-
-        .feature-card h4 {
-            font-family: "Times New Roman", Times, serif;
-            font-size: 20px;
-            color: var(--deep-blue);
-            margin: 0.5rem 0;
-            font-weight: normal;
-        }
-
-        .feature-card p {
-            font-family: "Times New Roman", Times, serif;
-            font-style: italic;
-            color: #333;
-            margin: 0.5rem 0;
-            font-size: 16px;
-        }
-    </style>
+  <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
-<header class="header">
-  <div class="header-background"></div>
-  <h1>Plumage</h1>
-  <div class="nav-container">
-    <nav class="nav-bar">
-      <a href="/">Home</a>
-      <a href="/about.html">About</a>
-      <a href="https://vip.gatech.edu/teams/vwx">Contact us</a>
-      <a href="/subscribe.html">Subscribe</a>
-      <a href="/contributors.html">Contributors</a>
-    </nav>
-  </div>
-</header>
-<div class="white-line"></div>
+  <header class="header">
+    <div class="header-background"></div>
+    <h1>Plumage</h1>
+    <div class="nav-container">
+      <nav class="nav-bar">
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
+        <a href="https://vip.gatech.edu/teams/vwx">Contact us</a>
+        <a href="/subscribe.html">Subscribe</a>
+        <a href="/contributors.html">Contributors</a>
+      </nav>
+    </div>
+  </header>
+  <div class="white-line"></div>
 
-<main class="content">
-  <div class="issue-info">
-    <h2>Le Cygne / The Swan</h2>
-    <div class="issue-date">Issue 01 • December 2024</div>
-  </div>
+  <div class="swrapper">
 
-  <div class="editor-statement">
-    The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
-  </div>
+    <input type="radio" name="r" id="r1" checked>
+    <input type="radio" name="r" id="r2">
+    <input type="radio" name="r" id="r3">
 
-  <div id="magazine-container">
-    <div id="magazine">
-      <div style="background: white; padding: 40px;">Page 1 content here</div>
-      <div style="background: white; padding: 40px;">Page 2 content here</div>
+    <div class="sliderwrap">
+      <img src="./images/pexels-ramaketu-670237.jpg" alt="image one">
+      <img src="./images/Victor_Hugo pic_Webpage_Stories.jpg" alt="image two">
+      <img src="./images/Swan pic Webpage_Bird of the Month.jpg" alt="image three">
+    </div>
+
+    <div class="navigation">
+      <label for="r1" class="bar"></label>
+      <label for="r2" class="bar"></label>
+      <label for="r3" class="bar"></label>
     </div>
   </div>
 
-  <div class="features-grid">
-    <div class="feature-card">
-      <img src="/images/pexels-ramaketu-670237.jpg" alt="Wings of Inspiration">
-      <h3>Overview: Wings of Inspiration</h3>
-      <p>By Stéphanie Boulard</p>
+  <main class="content">
+    <div class="issue-info">
+      <h2>Le Cygne / The Swan</h2>
+      <div class="issue-date">Issue 01 • December 2024</div>
     </div>
 
-    <div class="feature-card">
-      <img src="/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month">
-      <h3>Bird of the Month</h3>
-      <p>By Collin Agarwal and Karen Zheng</p>
+    <div class="editor-statement">
+      The Editor's statement. Embed the issue below so that it appears as spread and is flipped when going to next page.
     </div>
 
-    <div class="feature-card">
-      <img src="/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
-      <h3>The Swan Stories</h3>
-      <p>By Baudelaire and Victor Hugo</p>
+    <div id="magazine-container">
+      <div id="magazine">
+        <div style="background: white; padding: 40px;">Page 1 content here</div>
+        <div style="background: white; padding: 40px;">Page 2 content here</div>
+      </div>
     </div>
 
-    <div class="feature-card">
-      <img src="/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan">
-      <h3>Art: A Special Section</h3>
-      <h4>Leda and the Swan in the Arts</h4>
-      <p>By Ella Newell</p>
-    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="/images/pexels-ramaketu-670237.jpg" alt="Wings of Inspiration">
+        <h3>Overview: Wings of Inspiration</h3>
+        <p>By Stéphanie Boulard</p>
+      </div>
 
-    <div class="feature-card">
-      <img src="/images/swan pic_webpage_Interview.jpg" alt="Lover of Birds">
-      <h3>Ornithology</h3>
-      <h4>An interview with a lover of birds</h4>
-      <p>By Stéphanie Boulard</p>
-    </div>
+      <div class="feature-card">
+        <img src="/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month">
+        <h3>Bird of the Month</h3>
+        <p>By Collin Agarwal and Karen Zheng</p>
+      </div>
 
-    <div class="feature-card">
-      <img src="/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme">
-      <h3>Swan Meme</h3>
-      <p>By Karen Zheng</p>
-    </div>
-  </div>
-</main>
+      <div class="feature-card">
+        <img src="/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
+        <h3>The Swan Stories</h3>
+        <p>By Baudelaire and Victor Hugo</p>
+      </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="turn.js"></script>
-<script>
-        $(document).ready(function() {
-            $("#magazine").turn({
-                display: 'double',
-                acceleration: true,
-                gradients: !$.isTouch,
-                elevation: 50,
-                when: {
-                    turned: function(e, page) {
-                        console.log('Current page: ' + page);
-                    }
-                }
-            });
-        });
-    </script>
+      <div class="feature-card">
+        <img src="/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan">
+        <h3>Art: A Special Section</h3>
+        <h4>Leda and the Swan in the Arts</h4>
+        <p>By Ella Newell</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="/images/swan pic_webpage_Interview.jpg" alt="Lover of Birds">
+        <h3>Ornithology</h3>
+        <h4>An interview with a lover of birds</h4>
+        <p>By Stéphanie Boulard</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme">
+        <h3>Swan Meme</h3>
+        <p>By Karen Zheng</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="turn.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#magazine").turn({
+        display: 'double',
+        acceleration: true,
+        gradients: !$.isTouch,
+        elevation: 50,
+        when: {
+          turned: function (e, page) {
+            console.log('Current page: ' + page);
+          }
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>
