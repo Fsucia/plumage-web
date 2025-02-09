@@ -1,0 +1,245 @@
+    :root {
+        --deep-blue: #1B4B5A;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Times New Roman", Times, serif;
+        background-color: #fff;
+    }
+
+    .header {
+        position: relative;
+        height: 350px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .header-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./images/NewHeaderHorizontal.jpg');
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .header h1 {
+        color: white;
+        font-size: 72px;
+        font-family: "Times New Roman", Times, serif;
+        position: absolute;
+        bottom: 80px;
+        left: 40px;
+        margin: 0;
+        z-index: 2;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    .nav-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(27, 75, 90, 0.8), rgba(27, 75, 90, 1));
+        z-index: 2;
+    }
+
+    .nav-bar {
+        max-width: 100%;
+        border-style: solid;
+        margin: 0 auto;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-bar a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        padding: 0 15px;
+        border-right: 1px solid white;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: normal;
+        text-transform: none;
+    }
+
+    .nav-bar a:last-child {
+        border-right: none;
+    }
+
+    .white-line {
+        height: 2px;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .swrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
+
+
+    .sliderwrap {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .sliderwrap img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    input[type="radio"] {
+        display: none;
+    }
+
+
+    input#r1:checked~.sliderwrap img:nth-child(1) {
+        opacity: 1;
+    }
+
+    input#r2:checked~.sliderwrap img:nth-child(2) {
+        opacity: 1;
+    }
+
+    input#r3:checked~.sliderwrap img:nth-child(3) {
+        opacity: 1;
+    }
+
+    .navigation {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .bar {
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+
+    input[type="radio"]:checked+.bar {
+        background: white;
+    }
+
+
+
+    #magazine-container {
+        width: 100%;
+        padding: 2rem 0;
+        background-color: #fff;
+    }
+
+    #magazine {
+        width: 800px;
+        height: 500px;
+        margin: 0 auto;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        background: white;
+    }
+
+    .content {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+
+    .issue-info {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .issue-info h2 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 36px;
+        color: var(--deep-blue);
+        margin-bottom: 0.5rem;
+        font-style: italic;
+        font-weight: normal;
+    }
+
+    .issue-date {
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        color: #666;
+        font-size: 18px;
+    }
+
+    .editor-statement {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 24px;
+        line-height: 1.4;
+        color: var(--deep-blue);
+        margin: 2rem 0;
+        text-align: left;
+        max-width: 800px;
+        margin: 2rem auto;
+        font-weight: normal;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        position: relative;
+        background: #fff;
+        padding: 1rem;
+    }
+
+    .feature-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .feature-card h3 {
+        font-family: "Times New Roman", Times, serif;
+        margin: 1rem 0;
+        font-size: 24px;
+        color: var(--deep-blue);
+        font-weight: normal;
+    }
+
+    .feature-card h4 {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 20px;
+        color: var(--deep-blue);
+        margin: 0.5rem 0;
+        font-weight: normal;
+    }
+
+    .feature-card p {
+        font-family: "Times New Roman", Times, serif;
+        font-style: italic;
+        color: #333;
+        margin: 0.5rem 0;
+        font-size: 16px;
+    }
