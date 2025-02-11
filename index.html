@@ -9,6 +9,8 @@
     <!-- CSS -->
     <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -17,8 +19,11 @@
 
     <header class="header">
         <div class="header-background"></div>
-        <h1>Plumage</h1>
+        <h1 class="highlighted-text-shadow">Plumage</h1>
         <div class="nav-container">
+            <div>
+                <img src="./assets/images/plumage logo (1).png" class="logo">
+            </div>
             <nav class="nav-bar">
                 <a href="index.html">Home</a>
                 <a href="https://vip.gatech.edu/teams/vwx">Contact us</a>
@@ -28,12 +33,50 @@
         </div>
     </header>
     <div class="white-line"></div>
+    <div class="swrapper">
 
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+
+        <div class="sliderwrap">
+            <img src="./assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="image one">
+            <img src="./assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="image two">
+            <img src="./assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="image three">
+        </div>
+
+        <div class="navigation">
+            <label for="r1" class="bar"></label>
+            <label for="r2" class="bar"></label>
+            <label for="r3" class="bar"></label>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 1;
+        const totalSlides = 3;
+        let autoSlide = setInterval(nextSlide, 4500);
+
+        function nextSlide() {
+            currentIndex = (currentIndex % totalSlides) + 1;
+            document.getElementById("r" + currentIndex).checked = true;
+        }
+
+
+        document.querySelectorAll("input[name='r']").forEach((radio) => {
+            radio.addEventListener("change", () => {
+                clearInterval(autoSlide);
+                autoSlide = setInterval(nextSlide, 3000);
+            });
+        });
+    </script>
     <main class="content">
         <div class="issue-info">
             <h2>Le Cygne / The Swan</h2>
             <div class="issue-date">Issue 01 • December 2024</div>
         </div>
+
+
         <div class="magazine-container">
             <div class="magazine-viewer">
                 <div class="magazine-spread" id="magazineSpread">
@@ -41,18 +84,22 @@
                 </div>
                 <div class="magazine-controls">
                     <button class="control-btn" id="prevBtn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M15 18l-6-6 6-6" />
                         </svg>
                     </button>
-                    <span class="spread-counter">Spread <span id="currentSpread">1</span> of <span id="totalSpreads">3</span></span>
+                    <span class="spread-counter">Spread <span id="currentSpread">1</span> of <span
+                            id="totalSpreads">3</span></span>
                     <button class="control-btn" id="nextBtn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M9 18l6-6-6-6" />
                         </svg>
                     </button>
                     <button class="control-btn" id="zoomBtn">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="zoomIcon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" id="zoomIcon">
                             <circle cx="11" cy="11" r="8" />
                             <path d="M21 21l-4.35-4.35" />
                             <path d="M11 8v6M8 11h6" />
@@ -89,7 +136,8 @@
             </div>
 
             <div class="feature-card">
-                <img src="assets/images/swan pic_webpage_Interview.jpg" alt="Lover of Birds">
+                <a href="interview.html"><img src="assets/images/swan pic_webpage_Interview.jpg"
+                        alt="Lover of Birds"></a>
                 <h3>Ornithology</h3>
                 <h4>An interview with a lover of birds</h4>
                 <p>By Stéphanie Boulard</p>
@@ -103,126 +151,126 @@
         </div>
     </main>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-<script>
- pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
- document.addEventListener('DOMContentLoaded', function() {
- const spread = document.getElementById('magazineSpread');
- const prevBtn = document.getElementById('prevBtn');
- const nextBtn = document.getElementById('nextBtn');
- const zoomBtn = document.getElementById('zoomBtn');
- const currentSpreadElement = document.getElementById('currentSpread');
- const totalSpreadsElement = document.getElementById('totalSpreads');
- const zoomIcon = document.getElementById('zoomIcon');
+        document.addEventListener('DOMContentLoaded', function () {
+            const spread = document.getElementById('magazineSpread');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const zoomBtn = document.getElementById('zoomBtn');
+            const currentSpreadElement = document.getElementById('currentSpread');
+            const totalSpreadsElement = document.getElementById('totalSpreads');
+            const zoomIcon = document.getElementById('zoomIcon');
 
- let currentSpread = 1;
- let isZoomed = false;
- let isDragging = false;
- let startPosition = { x: 0, y: 0 };
- let currentPosition = { x: 0, y: 0 };
+            let currentSpread = 1;
+            let isZoomed = false;
+            let isDragging = false;
+            let startPosition = { x: 0, y: 0 };
+            let currentPosition = { x: 0, y: 0 };
 
- pdfjsLib.getDocument('Plumage Issue No1 Le Cygne_The Swan.pdf').promise.then(function(pdf) {
- const totalSpreads = Math.ceil(pdf.numPages / 2);
- totalSpreadsElement.textContent = totalSpreads;
+            pdfjsLib.getDocument('Plumage Issue No1 Le Cygne_The Swan.pdf').promise.then(function (pdf) {
+                const totalSpreads = Math.ceil(pdf.numPages / 2);
+                totalSpreadsElement.textContent = totalSpreads;
 
- async function loadSpread(spreadNum) {
- const startPage = (spreadNum - 1) * 2 + 1;
- spread.innerHTML = '';
+                async function loadSpread(spreadNum) {
+                    const startPage = (spreadNum - 1) * 2 + 1;
+                    spread.innerHTML = '';
 
- for (let i = 0; i < 2; i++) {
- const pageNum = startPage + i;
- if (pageNum <= pdf.numPages) {
- const page = await pdf.getPage(pageNum);
- const viewport = page.getViewport({ scale: 1.0 });
- const containerHeight = spread.clientHeight;
- const baseScale = 2.0;
- const scale = ((containerHeight - 40) / viewport.height) * baseScale;
+                    for (let i = 0; i < 2; i++) {
+                        const pageNum = startPage + i;
+                        if (pageNum <= pdf.numPages) {
+                            const page = await pdf.getPage(pageNum);
+                            const viewport = page.getViewport({ scale: 1.0 });
+                            const containerHeight = spread.clientHeight;
+                            const baseScale = 2.0;
+                            const scale = ((containerHeight - 40) / viewport.height) * baseScale;
 
- const scaledViewport = page.getViewport({ scale });
- const canvas = document.createElement('canvas');
- const context = canvas.getContext('2d');
+                            const scaledViewport = page.getViewport({ scale });
+                            const canvas = document.createElement('canvas');
+                            const context = canvas.getContext('2d');
 
- canvas.width = scaledViewport.width;
- canvas.height = scaledViewport.height;
+                            canvas.width = scaledViewport.width;
+                            canvas.height = scaledViewport.height;
 
- await page.render({
- canvasContext: context,
- viewport: scaledViewport
- }).promise;
+                            await page.render({
+                                canvasContext: context,
+                                viewport: scaledViewport
+                            }).promise;
 
- const pageDiv = document.createElement('div');
- pageDiv.className = 'page';
- const contentDiv = document.createElement('div');
- contentDiv.className = 'page-content';
- contentDiv.appendChild(canvas);
- pageDiv.appendChild(contentDiv);
- spread.appendChild(pageDiv);
- }
- }
- }
+                            const pageDiv = document.createElement('div');
+                            pageDiv.className = 'page';
+                            const contentDiv = document.createElement('div');
+                            contentDiv.className = 'page-content';
+                            contentDiv.appendChild(canvas);
+                            pageDiv.appendChild(contentDiv);
+                            spread.appendChild(pageDiv);
+                        }
+                    }
+                }
 
- spread.addEventListener('mousedown', (e) => {
- if (isZoomed) {
- isDragging = true;
- startPosition = {
- x: e.clientX - currentPosition.x,
- x: e.clientX - currentPosition.x,
- y: e.clientY - currentPosition.y
- };
- spread.style.cursor = 'grabbing';
- }
- });
+                spread.addEventListener('mousedown', (e) => {
+                    if (isZoomed) {
+                        isDragging = true;
+                        startPosition = {
+                            x: e.clientX - currentPosition.x,
+                            x: e.clientX - currentPosition.x,
+                            y: e.clientY - currentPosition.y
+                        };
+                        spread.style.cursor = 'grabbing';
+                    }
+                });
 
- document.addEventListener('mousemove', (e) => {
- if (isDragging && isZoomed) {
- currentPosition = {
- x: e.clientX - startPosition.x,
- y: e.clientY - startPosition.y
- };
- spread.style.transform = `scale(1.5) translate(${currentPosition.x}px, ${currentPosition.y}px)`;
- }
- });
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging && isZoomed) {
+                        currentPosition = {
+                            x: e.clientX - startPosition.x,
+                            y: e.clientY - startPosition.y
+                        };
+                        spread.style.transform = `scale(1.5) translate(${currentPosition.x}px, ${currentPosition.y}px)`;
+                    }
+                });
 
- document.addEventListener('mouseup', () => {
- isDragging = false;
- spread.style.cursor = isZoomed ? 'move' : 'default';
- });
+                document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                    spread.style.cursor = isZoomed ? 'move' : 'default';
+                });
 
- function updateSpreadCounter() {
- currentSpreadElement.textContent = currentSpread;
- prevBtn.disabled = currentSpread === 1;
- nextBtn.disabled = currentSpread === totalSpreads;
- }
+                function updateSpreadCounter() {
+                    currentSpreadElement.textContent = currentSpread;
+                    prevBtn.disabled = currentSpread === 1;
+                    nextBtn.disabled = currentSpread === totalSpreads;
+                }
 
- prevBtn.addEventListener('click', () => {
- if (currentSpread > 1) {
- currentSpread--;
- loadSpread(currentSpread);
- updateSpreadCounter();
- }
- });
+                prevBtn.addEventListener('click', () => {
+                    if (currentSpread > 1) {
+                        currentSpread--;
+                        loadSpread(currentSpread);
+                        updateSpreadCounter();
+                    }
+                });
 
- nextBtn.addEventListener('click', () => {
- if (currentSpread < totalSpreads) {
- currentSpread++;
- loadSpread(currentSpread);
- updateSpreadCounter();
- }
- });
+                nextBtn.addEventListener('click', () => {
+                    if (currentSpread < totalSpreads) {
+                        currentSpread++;
+                        loadSpread(currentSpread);
+                        updateSpreadCounter();
+                    }
+                });
 
- zoomBtn.addEventListener('click', () => {
- isZoomed = !isZoomed;
- if (isZoomed) {
- spread.style.transform = 'scale(1.5)';
- currentPosition = { x: 0, y: 0 };
- } else {
- spread.style.transform = 'scale(1)';
- }
- spread.style.cursor = isZoomed ? 'move' : 'default';
+                zoomBtn.addEventListener('click', () => {
+                    isZoomed = !isZoomed;
+                    if (isZoomed) {
+                        spread.style.transform = 'scale(1.5)';
+                        currentPosition = { x: 0, y: 0 };
+                    } else {
+                        spread.style.transform = 'scale(1)';
+                    }
+                    spread.style.cursor = isZoomed ? 'move' : 'default';
 
- zoomIcon.innerHTML = isZoomed ? `
+                    zoomIcon.innerHTML = isZoomed ? `
  <circle cx="11" cy="11" r="8" />
  <path d="M21 21l-4.35-4.35" />
  <path d="M11 8v6" />
@@ -231,11 +279,12 @@
  <path d="M21 21l-4.35-4.35" />
  <path d="M11 8v6M8 11h6" />
  `;
- });
- loadSpread(currentSpread);
- updateSpreadCounter();
- });
- });
- </script>
+                });
+                loadSpread(currentSpread);
+                updateSpreadCounter();
+            });
+        });
+    </script>
 </body>
+
 </html>

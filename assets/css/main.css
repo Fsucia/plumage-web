@@ -30,7 +30,6 @@ body {
    text-align: center;
    z-index: 2;
 }
-
 .highlighted-text-shadow {
    text-shadow:
    0 .15ch 15px var(--shadow),
@@ -61,7 +60,6 @@ body {
    /* opacity */
    z-index: 2;
 }
-
 .logo {
    width: 40px;
    height: 40px;
@@ -151,7 +149,6 @@ input[type="radio"]:checked+.bar {
    display: flex;
    justify-content: space-between;
 }
-
 .nav-bar {
    max-width: 1200px;
    margin: 0 auto;
@@ -248,7 +245,6 @@ input[type="radio"]:checked+.bar {
    transition: transform 0.3s ease;
    gap: 4px;
 }
-
 .page {
    background: white;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
