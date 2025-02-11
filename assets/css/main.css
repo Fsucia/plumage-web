@@ -1,5 +1,10 @@
 :root {
    --deep-blue: #1B4B5A;
+   --hue: 240;
+ 	--deep-blue: #1B4B5A;
+   --text: oklch(85% .1 var(--hue));
+   --shadow: oklch(25% .25 var(--hue));
+   --highlight: oklch(98% .05 var(--hue));
 }
 
 body {
@@ -9,13 +14,30 @@ body {
    background-color: #fff;
 }
 
-/* Header styling */
 .header {
-   position: relative;
-   height: 350px;
-   width: 100%;
-   overflow: hidden;
+   display: flex;
+   justify-content: center; /* Centers horizontally */
+   align-items: center; /* Centers vertically */
+   height: 35vh; /* Ensure parent has a height */
+   position: relative; /* Ensure relative positioning for child elements */
 }
+
+.header h1 {
+   color: white;
+   font-size: 72px;
+   font-family: "Lora", serif;
+   font-weight: 600;
+   text-align: center;
+   z-index: 2;
+}
+
+.highlighted-text-shadow {
+   text-shadow:
+   0 .15ch 15px var(--shadow),
+   /* text-shadow highlight */
+   0 -2px 0 var(--highlight);
+}
+
 
 .header-background {
    position: absolute;
