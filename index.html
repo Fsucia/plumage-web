@@ -9,7 +9,7 @@
     <!-- CSS -->
     <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
-
+    <link href="assets/css/navbar.css" rel="stylesheet">
 
 </head>
 
@@ -19,18 +19,11 @@
 
     <header class="header">
         <div class="header-background"></div>
-        <h1 class="highlighted-text-shadow">Plumage</h1>
-        <div class="nav-container">
-            <div>
-                <img src="./assets/images/plumage logo (1).png" class="logo">
-            </div>
-            <nav class="nav-bar">
-                <a href="index.html">Home</a>
-                <a href="https://vip.gatech.edu/teams/vwx">Contact us</a>
-                <a href="contributors.html">Contributors</a>
-            </nav>
-        </div>
+        <h1>Plumage</h1>
     </header>
+
+    <div id="navbar-container"></div>
+
     <div class="white-line"></div>
     <div class="swrapper">
 
@@ -49,6 +42,10 @@
             <label for="r2" class="bar"></label>
             <label for="r3" class="bar"></label>
         </div>
+    </div>
+
+    <div id="navbar">
+        <nav class="navbar navbar-expand-lg bg-custom"style="min-height: 60px"></nav>
     </div>
 
     <script>
@@ -149,7 +146,7 @@
             </div>
         </div>
     </main>
-
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script>
@@ -284,6 +281,8 @@
             });
         });
     </script>
+
+<script src="assets/js/my_js.js"></script>
 </body>
 
 </html>
