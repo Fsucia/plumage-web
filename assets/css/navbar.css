@@ -1,0 +1,22 @@
+/* Custom Navbar Background */
+.bg-custom {
+    background-color: #1B4B5A; /* Change this to any color */
+    padding: 10px 0;
+  }
+  
+/* Base styles for Navbar Links */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    margin: 0px 15px;
+    border-radius: 5px; /* Rounded corners for the background effect */
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover Effect - Entire background colored */
+  .navbar-nav .nav-link:hover {
+    background-color: #4990a5; /* Change to your desired hover background color */
+    color: white; /* Adjust text color on hover if needed */
+  }
+  

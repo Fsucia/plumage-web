@@ -16,27 +16,25 @@ body {
 
 .header {
    display: flex;
-   justify-content: center; /* Centers horizontally */
-   align-items: center; /* Centers vertically */
+   justify-content: flex-start; /* Centers horizontally */
+   align-items: flex-end; /* Centers vertically */
    height: 35vh; /* Ensure parent has a height */
    position: relative; /* Ensure relative positioning for child elements */
 }
 
 .header h1 {
    color: white;
-   font-size: 50px;
+   font-size: 80px;
    font-family: "Lora", serif;
    font-weight: 600;
-   text-align: center;
+   text-align: left;
    z-index: 2;
-}
-.highlighted-text-shadow {
+   padding: 20px;
+
    text-shadow:
    0 .15ch 15px var(--shadow),
-   /* text-shadow highlight */
-   0 -2px 0 var(--highlight);
+   0 -1px 0 var(--highlight);
 }
-
 
 .header-background {
    position: absolute;
