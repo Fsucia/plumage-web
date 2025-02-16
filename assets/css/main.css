@@ -330,10 +330,38 @@ input[type="radio"]:checked+.bar {
 }
 
 .feature-card img {
+   display: block;
    width: 100%;
    height: 300px;
    object-fit: cover;
+   transition: transform 0.3s ease;
 }
+
+.feature-card .img-container {
+   position: relative;
+   display: block; /* Ensures it takes up the full image space */
+ }
+
+.feature-card .img-container::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   z-index: 3;
+ }
+
+ .feature-card .img-container:hover::after {
+   opacity: 1;
+ }
+
+ .feature-card:hover img {
+   transform: scale(1.01);
+ }
 
 .feature-card h3 {
    font-family: "Times New Roman", Times, serif;
