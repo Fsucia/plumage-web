@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plumage</title>
+
+  <!-- CSS -->
+  <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/navbar.css" rel="stylesheet">
+
+  <!-- PDF.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    .pdf-canvas {
+        border: 3px solid #000;  
+        border-radius: 5px;    
+        padding: 10px;           
+        margin: 10px auto;       
+        display: block;          
+    }
+  </style>
+  
+</head>
+
+<body>
+    <!-- JS -->
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    
+    <header class="header">
+        <div class="header-background"></div>
+        <h1>Plumage</h1>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="white-line"></div>
+    <main class="content">
+        <h1>Current Issue</h1>
+        <div class="issue-info">
+            <h2>Le Cygne / The Swan</h2>
+            <div class="issue-date">Issue 01 • December 2024</div>
+        </div>
+            <div id="magazine-container">
+            <canvas id="pdf-canvas" style="width: 100%;"></canvas>
+         </div>
+        <!-- Navigation Arrows -->
+        
+        <div class="navigation-arrows">
+            <p style="text-align:center;">
+            <button id="prev" class="arrow-button" style="text-align:left">
+                <i class="fas fa-arrow-left"></i> 
+            </button>
+            <button id="next" class="arrow-button">
+                <i class="fas fa-arrow-right"></i> 
+            </button>
+            </p>
+        </div>
+    
+
+</main>
+<script>
+    // Path to the PDF file
+    const url = 'Plumage Issue No1 Le Cygne_The Swan.pdf';
+
+    // Global variables for PDF.js
+    let pdfDoc = null;
+    let currentPage = 1;
+    let totalPages = 0;
+
+    // Initialize PDF.js
+    pdfjsLib.getDocument(url).promise.then(function (pdf) {
+        pdfDoc = pdf;
+        totalPages = pdf.numPages;
+        renderPage(currentPage); // Render the first page
+    });
+
+    // Function to render a page// Function to render a page
+        function renderPage(pageNum) {
+            pdfDoc.getPage(pageNum).then(function (page) {
+                const canvas = document.getElementById('pdf-canvas');
+                const ctx = canvas.getContext('2d');
+
+                // Get the width of the page (single or double)
+                const pageWidth = page.getViewport({ scale: 1 }).width;
+                const pageHeight = page.getViewport({ scale: 1 }).height;
+                const canvasWidth = canvas.offsetWidth;
+
+                // Calculate scale for both single and double pages
+                let scale = 1.5; // Default scale for the page
+                if (pageWidth < canvasWidth) {
+                    // If the page is a single page (smaller than canvas width)
+                    scale = canvasWidth / pageWidth; // Double the width to match a double-page spread
+                }
+
+                // Use scale to create a viewport
+                const viewport = page.getViewport({ scale: scale });
+
+                // Set the canvas size dynamically
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+
+                // Render the page
+                page.render({
+                    canvasContext: ctx,
+                    viewport: viewport
+                });
+            });
+        }
+
+    //keyboard navigation for left and right
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'ArrowLeft' && currentPage > 1) {
+            currentPage--;
+            renderPage(currentPage);
+        } else if (event.key === 'ArrowRight' && currentPage < totalPages) {
+            currentPage++;
+            renderPage(currentPage);
+        }
+    });
+
+
+    document.getElementById('prev').addEventListener('click', function () {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPage(currentPage);
+            }
+        });
+
+        document.getElementById('next').addEventListener('click', function () {
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPage(currentPage);
+            }
+        });
+</script>
+    <main class="content">
+        <h1>Previous Issues</h1>
+    </main>
+<script src="assets/js/my_js.js"></script>
+</body>
+</html>
