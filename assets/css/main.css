@@ -507,7 +507,7 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 .article-para {
-   font-size: 18px;
+   font-size: 24px;
    text-align: left;
    padding-left: 20%;
    padding-right: 20%;
