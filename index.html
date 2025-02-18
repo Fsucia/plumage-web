@@ -26,15 +26,44 @@
 
     <div class="white-line"></div>
     <div class="swrapper">
-
         <input type="radio" name="r" id="r1" checked>
         <input type="radio" name="r" id="r2">
         <input type="radio" name="r" id="r3">
 
         <div class="sliderwrap">
-            <img src="./assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="image one">
-            <img src="./assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="image two">
-            <img src="./assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="image three">
+            <div class="slide">
+                <div class="slider-text">
+                    <h3>Art: a special section</h3>
+                    <h4>Leda and the Swan in the Arts</h4>
+                    <p>By Ella Newell</p>
+                </div>
+                <a href="SwanArt.html">
+                    <img src="./assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="image one">
+                </a>
+
+            </div>
+            <div class="slide">
+                <div class="slider-text">
+                    <h3>The Swan Stories</h3>
+
+                    <p>By Baudelaire and Victor Hugo</p>
+                </div>
+                <a href="SwanStories.html">
+                    <img src="./assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="image two">
+                </a>
+
+            </div>
+            <div class="slide">
+                <div class="slider-text">
+                    <h3>Bird of The Month</h3>
+
+                    <p>By Collin Agarwal and Karen Zheng</p>
+                </div>
+                <a href="SwanoftheMonth.html">
+                    <img src="./assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="image three">
+                </a>
+
+            </div>
         </div>
 
         <div class="navigation">
@@ -45,7 +74,7 @@
     </div>
 
     <div id="navbar">
-        <nav class="navbar navbar-expand-lg bg-custom"style="min-height: 60px"></nav>
+        <nav class="navbar navbar-expand-lg bg-custom" style="min-height: 60px"></nav>
     </div>
 
     <script>
@@ -57,7 +86,6 @@
             currentIndex = (currentIndex % totalSlides) + 1;
             document.getElementById("r" + currentIndex).checked = true;
         }
-
 
         document.querySelectorAll("input[name='r']").forEach((radio) => {
             radio.addEventListener("change", () => {
@@ -107,46 +135,63 @@
 
         <div class="features-grid">
             <div class="feature-card">
-                <a class="img-container" href = "SwanEditorsNote.html"><img src = "assets/images/wings_of_inspiration.jpg" alt="Wings of Inspiration"></a>
-                <a href = "SwanEditorsNote.html"><h3>Overview: Wings of Inspiration</h3></a>
+                <a class="img-container" href="SwanEditorsNote.html"><img src="assets/images/wings_of_inspiration.jpg"
+                        alt="Wings of Inspiration"></a>
+                <a href="SwanEditorsNote.html">
+                    <h3>Overview: Wings of Inspiration</h3>
+                </a>
                 <p>By Stéphanie Boulard</p>
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href = "SwanoftheMonth.html"><img src = "assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month"></a>
-                <a href = "SwanofTheMonth.html"><h3>Bird of the Month</h3></a>
+                <a class="img-container" href="SwanoftheMonth.html"><img
+                        src="assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="Bird of the Month"></a>
+                <a href="SwanofTheMonth.html">
+                    <h3>Bird of the Month</h3>
+                </a>
                 <p>By Collin Agarwal and Karen Zheng</p>
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href = "SwanStories.html"><img src = "assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories"></a>
-                <a href = "SwanStories.html"><h3>The Swan Stories</h3></a>
+                <a class="img-container" href="SwanStories.html"><img
+                        src="assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories"></a>
+                <a href="SwanStories.html">
+                    <h3>The Swan Stories</h3>
+                </a>
                 <p>By Baudelaire and Victor Hugo</p>
             </div>
 
             <div class="feature-card">
-                <a href = SwanArt.html><img src="assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan"></a>
-                <a href = SwanArt.html><h3>Art: A Special Section</h3></a>
+                <a href=SwanArt.html><img src="assets/images/leda-and-the-swan pic_Webpage_Arts.jpg"
+                        alt="Leda and the Swan"></a>
+                <a href=SwanArt.html>
+                    <h3>Art: A Special Section</h3>
+                </a>
                 <h4>Leda and the Swan in the Arts</h4>
                 <p>By Ella Newell</p>
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href="interview.html"><img src="assets/images/Trumpeter_Swan.jpg" alt="Lover of Birds"></a>
-                <a href = "interview.html"><h3>Ornithology</h3></a>
+                <a class="img-container" href="interview.html"><img src="assets/images/Trumpeter_Swan.jpg"
+                        alt="Lover of Birds"></a>
+                <a href="interview.html">
+                    <h3>Ornithology</h3>
+                </a>
                 <h4>An interview with a lover of birds</h4>
                 <p>By Stéphanie Boulard</p>
             </div>
 
             <div class="feature-card">
-                <a href = "SwanMeme.html">
-                <img src="assets/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme"></a>
-                <a href = "SwanMeme.html"><h3>Swan Meme</h3></a>
+                <a href="SwanMeme.html">
+                    <img src="assets/images/Swan pic_for Meme-comic.jpeg" alt="Swan Meme"></a>
+                <a href="SwanMeme.html">
+                    <h3>Swan Meme</h3>
+                </a>
                 <p>By Karen Zheng</p>
             </div>
         </div>
     </main>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script>
@@ -282,7 +327,7 @@
         });
     </script>
 
-<script src="assets/js/my_js.js"></script>
+    <script src="assets/js/my_js.js"></script>
 </body>
 
 </html>
