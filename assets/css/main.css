@@ -1,11 +1,13 @@
 :root {
    --deep-blue: #1B4B5A;
    --hue: 240;
- 	--deep-blue: #1B4B5A;
+   --deep-blue: #1B4B5A;
    --text: oklch(85% .1 var(--hue));
    --shadow: oklch(25% .25 var(--hue));
    --highlight: oklch(98% .05 var(--hue));
 }
+
+
 
 body {
    margin: 0;
@@ -16,10 +18,14 @@ body {
 
 .header {
    display: flex;
-   justify-content: flex-start; /* Centers horizontally */
-   align-items: flex-end; /* Centers vertically */
-   height: 35vh; /* Ensure parent has a height */
-   position: relative; /* Ensure relative positioning for child elements */
+   justify-content: flex-start;
+   /* Centers horizontally */
+   align-items: flex-end;
+   /* Centers vertically */
+   height: 35vh;
+   /* Ensure parent has a height */
+   position: relative;
+   /* Ensure relative positioning for child elements */
 }
 
 .header h1 {
@@ -32,8 +38,8 @@ body {
    padding: 20px;
 
    text-shadow:
-   0 .15ch 15px var(--shadow),
-   0 -1px 0 var(--highlight);
+      0 .15ch 15px var(--shadow),
+      0 -1px 0 var(--highlight);
 }
 
 .header-background {
@@ -58,6 +64,7 @@ body {
    /* opacity */
    z-index: 2;
 }
+
 .logo {
    width: 40px;
    height: 40px;
@@ -75,61 +82,141 @@ body {
    position: relative;
 }
 
-
 .sliderwrap {
    position: relative;
    width: 100%;
    height: 100%;
 }
 
-.sliderwrap img {
+
+
+.slide {
    position: absolute;
    width: 100%;
    height: 100%;
-   object-fit: cover;
+   display: flex;
    opacity: 0;
    transition: opacity 1s ease-in-out;
+   pointer-events: none;
+}
+
+.slide img {
+   width: 50%;
+   height: 100%;
+   object-fit: cover;
+   left: 0;
+}
+
+.slider-text {
+   padding-top: 90px;
+   padding-left: 100px;
+   width: 50%;
+   display: flex;
+   gap: 10px;
+   flex-direction: column;
+   font-size: 24px;
+   font-weight: bold;
+   background: #F4FFF0;
+   color: black;
+
+
+}
+
+.slider-text h3 {
+   font-family: "Times New Roman", Times, serif;
+   margin: 1rem 0;
+   font-size: 30px;
+   color: var(--deep-blue);
+   font-weight: normal;
+}
+
+.slider-text h4 {
+   font-family: "Times New Roman", Times, serif;
+   font-size: 30px;
+   color: var(--deep-blue);
+   margin: 0.5rem 0;
+   font-weight: normal;
+}
+
+.slider-text p {
+   font-family: "Times New Roman", Times, serif;
+   font-style: italic;
+   color: #333;
+   margin: 0.5rem 0;
+   font-size: 20px;
+}
+
+.slider-text p {
+
+   margin-left: 85px;
+   height: auto;
 }
 
 input[type="radio"] {
    display: none;
 }
 
-
-input#r1:checked~.sliderwrap img:nth-child(1) {
+input#r1:checked~.sliderwrap .slide:nth-child(1),
+input#r2:checked~.sliderwrap .slide:nth-child(2),
+input#r3:checked~.sliderwrap .slide:nth-child(3) {
    opacity: 1;
-}
-
-input#r2:checked~.sliderwrap img:nth-child(2) {
-   opacity: 1;
-}
-
-input#r3:checked~.sliderwrap img:nth-child(3) {
-   opacity: 1;
+   pointer-events: auto;
 }
 
 .navigation {
    position: absolute;
-   bottom: 10px;
-   left: 50%;
+   bottom: 20px;
+   left: 10%;
    transform: translateX(-50%);
    display: flex;
-   gap: 10px;
+   gap: 20px;
+}
+
+.slide a {
+   display: block;
+   width: 60%;
+   height: 100%;
+}
+
+.slide a img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.slide a img:hover {
+   cursor: pointer;
+   filter: brightness(80%);
+   transition: filter 0.3s linear;
 }
 
 .bar {
-   width: 12px;
-   height: 12px;
-   background: rgba(255, 255, 255, 0.6);
+   width: 16px;
+   height: 16px;
+   background: #CDCDCD;
    border-radius: 50%;
    cursor: pointer;
    transition: background 0.3s ease-in-out;
 }
 
+.bar:hover {
+   background-color: #3b3b3b;
+   transform: translateY(-3px);
+}
 
 input[type="radio"]:checked+.bar {
    background: white;
 }
+
+input#r1:checked~.navigation label[for="r1"],
+input#r2:checked~.navigation label[for="r2"],
+input#r3:checked~.navigation label[for="r3"] {
+   background: black;
+   /* Turn black when active */
+}
+
+
+
 
 /* .header-background img {
     width: 100%;
@@ -147,6 +234,7 @@ input[type="radio"]:checked+.bar {
    display: flex;
    justify-content: space-between;
 }
+
 .nav-bar {
    max-width: 1200px;
    margin: 0 auto;
@@ -243,6 +331,7 @@ input[type="radio"]:checked+.bar {
    transition: transform 0.3s ease;
    gap: 4px;
 }
+
 .page {
    background: white;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -339,8 +428,9 @@ input[type="radio"]:checked+.bar {
 
 .feature-card .img-container {
    position: relative;
-   display: block; /* Ensures it takes up the full image space */
- }
+   display: block;
+   /* Ensures it takes up the full image space */
+}
 
 .feature-card .img-container::after {
    content: "";
@@ -349,19 +439,20 @@ input[type="radio"]:checked+.bar {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+   background-color: rgba(0, 0, 0, 0.3);
+   /* Semi-transparent black */
    opacity: 0;
    transition: opacity 0.3s ease;
    z-index: 3;
- }
+}
 
- .feature-card .img-container:hover::after {
+.feature-card .img-container:hover::after {
    opacity: 1;
- }
+}
 
- .feature-card:hover img {
+.feature-card:hover img {
    transform: scale(1.01);
- }
+}
 
 .feature-card h3 {
    font-family: "Times New Roman", Times, serif;
@@ -386,12 +477,14 @@ input[type="radio"]:checked+.bar {
    margin: 0.5rem 0;
    font-size: 16px;
 }
+
 .article-title {
    font-family: "Times New Roman", Times, serif;
    text-align: left;
    padding-left: 20%;
- }
- .article-title h2 {
+}
+
+.article-title h2 {
    font-family: "Times New Roman", Times, serif;
    font-size: 24px;
    color: var(--deep-blue);
@@ -399,17 +492,20 @@ input[type="radio"]:checked+.bar {
    font-style: italic;
    font-weight: normal;
 }
- .article-image img {
+
+.article-image img {
    width: 50%;
    height: 300px;
    object-fit: cover;
 }
+
 .section-title {
    font-size: 32px;
    font-family: "Times New Roman", Times, serif;
    text-align: left;
    padding-left: 20%;
 }
+
 .article-para {
    font-size: 18px;
    text-align: left;
