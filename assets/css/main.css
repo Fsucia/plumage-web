@@ -510,5 +510,5 @@ input#r3:checked~.navigation label[for="r3"] {
    font-size: 18px;
    text-align: left;
    padding-left: 20%;
-   padding-right: 50%;
+   padding-right: 20%;
 }
