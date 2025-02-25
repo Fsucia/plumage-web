@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumage</title>
+
+    <!-- CSS -->
+    <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/navbar.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        h1, h2, .form-label, .btn-primary {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- JS -->
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+    <header class="header">
+        <div class="header-background"></div>
+        <h1>Plumage</h1>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="white-line"></div>
+    <main class="content">
+        <h1>Contact Us</h1>
+    </header>
+    <main class="container py-5">
+        <h2 class="text-center">We'd love to hear from you!</h2>
+        <form action="send_email.php" method="POST"></form>
+            <div class="mb-3 style">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Please enter message..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background: linear-gradient(to bottom, rgba(27, 75, 90, 0.8), rgba(27, 75, 90, 1)) !important;">Send Message</button>
+        </form>
+    </main>
+
+    <script src="assets/js/my_js.js"></script>
+</body>
+</html>
