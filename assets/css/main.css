@@ -512,3 +512,18 @@ input#r3:checked~.navigation label[for="r3"] {
    padding-left: 20%;
    padding-right: 20%;
 }
+
+.center-buttons {
+   
+   display: flex;
+   justify-content: center; /* Center horizontally */
+   align-items: center; /* Center vertically */
+  
+   gap: 1rem; /* Spacing between buttons */
+}
+
+.btn {
+   font-size: 1.5rem; /* Make text larger */
+   padding: 1rem 2rem; /* Increase button size */
+   min-width: 200px; /* Ensure a larger button */
+}
