@@ -535,23 +535,27 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 .article-image img {
-   width: 50%;
-   height: 300px;
-   object-fit: cover;
+   max-width: 100%; /* Prevents exceeding the container width */
+   width: auto; /* Expands as much as possible while maintaining aspect ratio */
+   max-height: 600px; /* Limits the height */
+   height: auto; /* Ensures aspect ratio is preserved */
+   display: block; /* Removes extra space below */
+
 }
+
 
 .section-title {
    font-size: 32px;
    font-family: "Times New Roman", Times, serif;
    text-align: left;
-   padding-left: 20%;
+   padding-left: 0%;
 }
 
 .article-para {
    font-size: 24px;
    text-align: left;
-   padding-left: 20%;
-   padding-right: 20%;
+   padding-left: 0%;
+   padding-right: 0%;
 }
 
 .center-buttons {
