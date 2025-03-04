@@ -1,0 +1,277 @@
+<h2>Animal & Birds Crossword Puzzle</h2>
+
+<table>
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td id="11"><input class="inpt" type="text"></input></td>
+        <td id="12"><input class="inpt" type="text"></input></td>
+        <td id="13"><input class="inpt" type="text"></input></td>
+        <td id="14"><input class="inpt" type="text"></input></td>
+        <td id="15"><input class="inpt" type="text"></input></td>
+        <td id="16"><input class="inpt" type="text"></input></td>
+    </tr>
+
+    <tr>
+        <td id="17"><input class="inpt" type="text"></input></td>
+        <td id="18"><input class="inpt" type="text"></input></td>
+        <td id="19"><input class="inpt" type="text"></input></td>
+        <td id="20"><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td id="30"><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td id="21"><input class="inpt" type="text"></input></td>
+        <td id="22"><input class="inpt" type="text"></input></td>
+        <td id="23"><input class="inpt" type="text"></input></td>
+        <td id="24"><input class="inpt" type="text"></input></td>
+        <td id="25"><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td id="31"><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td id="32"><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+    <tr>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input class="inpt" type="text"></input></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+        <td><input type="text" value="" readonly class="dark"></td>
+    </tr>
+
+
+</table>
+
+
+
+
+
+<h3>Across</h3>
+<ol>
+    <li>known for mimicry</li>
+    <li>used as mail in this fictional series that took place in the UK</li>
+    <li>A word describing birds or planes</li>
+</ol>
+<br>
+<h3>Down</h3>
+<ol>
+    <li>A bird whose name rhymes with lover</li>
+    <li>A bird often times pictured on a snowy branch</li>
+</ol>
+
+<script>
+    var inputs = document.querySelectorAll("input.inpt");
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("input", function () {
+            var allValues = "";
+            for (var j = 11; j <= 16; j++) {
+                let inputElement = document.getElementById(j.toString());
+                if (inputElement) {
+                    allValues += inputElement.getElementsByTagName("input")[0].value;
+                }
+            }
+            if (allValues.toLowerCase() === "parrot") {
+                for (var k = 11; k <= 16; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "green";
+                    }
+                }
+            } else {
+                for (var k = 11; k <= 16; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "red";
+                    }
+                }
+            }
+        });
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("input", function () {
+            var allValues = "";
+            for (var j = 17; j <= 20; j++) {
+                let inputElement = document.getElementById(j.toString());
+                if (inputElement) {
+                    allValues += inputElement.getElementsByTagName("input")[0].value;
+                }
+            }
+            if (allValues.toLowerCase() === "owls") {
+                for (var k = 17; k <= 20; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "green";
+                    }
+                }
+            } else {
+                for (var k = 17; k <= 206; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "red";
+                    }
+                }
+            }
+        });
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("input", function () {
+            var allValues = "";
+            for (var j = 21; j <= 25; j++) {
+                let inputElement = document.getElementById(j.toString());
+                if (inputElement) {
+                    allValues += inputElement.getElementsByTagName("input")[0].value;
+                }
+            }
+            if (allValues.toLowerCase() === "avian") {
+                for (var k = 21; k <= 25; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "green";
+                    }
+                }
+            } else {
+                for (var k = 21; k <= 25; k++) {
+                    let inputElement = document.getElementById(k.toString());
+                    if (inputElement) {
+                        inputElement.getElementsByTagName("input")[0].style.color = "red";
+                    }
+                }
+            }
+        });
+    }
+
+
+    var ploverIds = [11, 19, 30, 22, 31, 32];
+    var correctAnswers = {
+        11: "p",  // for the input at ID 11
+        19: "l",  // for the input at ID 12
+        30: "o",  // for the input at ID 13
+        22: "v",  // for the input at ID 14
+        31: "e",  // for the input at ID 15
+        32: "r",  // for the input at ID 16
+    };
+
+    inputs.forEach(function (input) {
+        input.addEventListener("input", function () {
+            // Get the current grid's ID
+            var gridId = input.closest("td").id;
+
+            // Check if the input matches the correct answer for that grid
+            if (correctAnswers[gridId] && input.value.toLowerCase() === correctAnswers[gridId]) {
+                input.style.backgroundColor = "green";  // Set background color to green
+                input.disabled = true;  // Disable the input field
+            } else {
+                input.style.backgroundColor = "";  // Remove the background color
+                input.disabled = false;  // Re-enable the input field
+            }
+        });
+    });
+</script>
+
+
+<style>
+    table {
+        text-align: center;
+        padding: 10px;
+        border: 1px dashed #888;
+    }
+
+    td {
+        width: 30px;
+        height: 30px;
+    }
+
+    .dark {
+        background: #333;
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid #222;
+
+    }
+
+    .inpt {
+        width: 30px;
+        height: 30px;
+        font-size: 24px;
+        text-align: center;
+        border: 2px solid #222;
+    }
+</style>

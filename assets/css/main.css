@@ -25,7 +25,7 @@ body {
    height: 35vh;
    /* Ensure parent has a height */
    position: relative;
-   /* Ensure relative positioning for child elements */
+
 }
 
 .header h1 {
@@ -36,7 +36,8 @@ body {
    text-align: left;
    z-index: 2;
    padding: 20px;
-
+   margin-left: 40px;
+   margin-top: 60px;
    text-shadow:
       0 .15ch 15px var(--shadow),
       0 -1px 0 var(--highlight);
@@ -51,6 +52,13 @@ body {
    background-position: center;
    overflow: hidden;
    z-index: 1;
+}
+
+h1 img {
+   width: 60px;
+   height: 60px;
+   rotate: -30deg;
+   margin-bottom: 30px;
 }
 
 .header-background::before {
@@ -188,6 +196,31 @@ input#r3:checked~.sliderwrap .slide:nth-child(3) {
    cursor: pointer;
    filter: brightness(80%);
    transition: filter 0.3s linear;
+}
+
+.lines {
+
+   border: none;
+   height: 10px;
+
+   background-color: black;
+}
+
+.quotebox {
+   margin-left: 70px;
+   height: 200px;
+
+}
+
+.bird-quotes {
+   margin-top: 50px;
+   font-size: 3rem;
+}
+
+.bird-quotes-2 {
+   font-family: "Times New Roman", Times, serif;
+   font-style: italic;
+   font-size: 1.5rem;
 }
 
 .bar {
@@ -482,6 +515,7 @@ input#r3:checked~.navigation label[for="r3"] {
    font-family: "Times New Roman", Times, serif;
    text-align: left;
    padding-left: 20%;
+   padding-top: 5%;
 }
 
 .article-title h2 {
@@ -514,16 +548,22 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 .center-buttons {
-   
+
    display: flex;
-   justify-content: center; /* Center horizontally */
-   align-items: center; /* Center vertically */
-  
-   gap: 1rem; /* Spacing between buttons */
+   justify-content: center;
+   /* Center horizontally */
+   align-items: center;
+   /* Center vertically */
+
+   gap: 1rem;
+   /* Spacing between buttons */
 }
 
 .btn {
-   font-size: 1.5rem; /* Make text larger */
-   padding: 1rem 2rem; /* Increase button size */
-   min-width: 200px; /* Ensure a larger button */
+   font-size: 1.5rem;
+   /* Make text larger */
+   padding: 1rem 2rem;
+   /* Increase button size */
+   min-width: 200px;
+   /* Ensure a larger button */
 }
