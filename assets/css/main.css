@@ -37,7 +37,7 @@ body {
    z-index: 2;
    padding: 20px;
    margin-left: 40px;
-   margin-top: 60px;
+   margin-top: 80px;
    text-shadow:
       0 .15ch 15px var(--shadow),
       0 -1px 0 var(--highlight);
@@ -248,6 +248,9 @@ input#r3:checked~.navigation label[for="r3"] {
    /* Turn black when active */
 }
 
+.quoteName {
+   font-weight: 900;
+}
 
 
 
