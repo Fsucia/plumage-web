@@ -585,3 +585,53 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 
+
+.footer {
+   background: #343a40;
+   /* Dark background */
+   color: white;
+   padding: 40px 0;
+   font-size: 18px;
+}
+
+/* Centering the rights and corp links */
+.rights-text,
+.corp {
+   text-align: center;
+   margin: 10px 0;
+}
+
+/* Footer link sections */
+.footer-links {
+   display: grid;
+   /* Use grid for 2 rows */
+   grid-template-columns: repeat(2, 1fr);
+   /* Two equal-width columns */
+   gap: 20px;
+
+   justify-items: center;
+
+   margin-top: 20px;
+}
+
+
+.footer-one,
+.footer-two {
+   display: flex;
+   flex-direction: column;
+
+   gap: 15px;
+
+}
+
+.footer a {
+   font-size: 24px;
+
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.footer a:hover {
+   color: #f8b400;
+
+}
