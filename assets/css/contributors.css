@@ -1,0 +1,97 @@
+.full-row {
+    width: 100%;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+
+    margin-bottom: 25px;;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.name {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.position {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+.profile-image img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* other contributors */
+
+.contributor-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f9f9f9;
+    margin-bottom: 25px;
+}
+
+.contributor-body {
+    padding: 15px;
+}
+
+.contributor-year {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.contributor-group {
+    margin-bottom: 20px;
+}
+
+.contributor-role {
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.contributor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contributor-list li {
+    font-size: 1.1rem;
+    color: #222;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Optional: Add a small bullet before each name */
+.contributor-list li::before {
+    content: "•";
+    color: #888;
+    font-size: 1rem;
+    position: absolute;
+    left: 0;
+}

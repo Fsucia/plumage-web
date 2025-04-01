@@ -96,8 +96,6 @@ h1 img {
    height: 100%;
 }
 
-
-
 .slide {
    position: absolute;
    width: 100%;
@@ -440,29 +438,36 @@ input#r3:checked~.navigation label[for="r3"] {
 /* Features Grid */
 .features-grid {
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 2rem;
+   grid-template-columns: repeat(2, minmax(300px, 1fr));
+   gap: 5rem;
    margin-top: 2rem;
+   place-items: center;
+   align-items: start;
 }
 
 .feature-card {
    position: relative;
    background: #fff;
    padding: 1rem;
-}
-
-.feature-card img {
-   display: block;
-   width: 100%;
-   height: 300px;
-   object-fit: cover;
-   transition: transform 0.3s ease;
+   max-height: 700px;
 }
 
 .feature-card .img-container {
    position: relative;
    display: block;
+   aspect-ratio: 3 / 2; /* Maintains a consistent aspect ratio */
+   max-height: 400px;
+   overflow: hidden;
    /* Ensures it takes up the full image space */
+}
+
+.feature-card img {
+   display: block;
+   width: 100%;
+   width: 100%;
+   /* height: 300px; */
+   object-fit: cover;
+   transition: transform 0.3s ease;
 }
 
 .feature-card .img-container::after {
@@ -518,6 +523,13 @@ input#r3:checked~.navigation label[for="r3"] {
    padding-top: 5%;
 }
 
+.article-title1 {
+   font-family: "Times New Roman", Times, serif;
+   text-align: left;
+   padding-left: 20%;
+   padding-top: 2%;
+}
+
 .article-title h2 {
    font-family: "Times New Roman", Times, serif;
    font-size: 24px;
@@ -528,23 +540,27 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 .article-image img {
-   width: 50%;
-   height: 300px;
-   object-fit: cover;
+   max-width: 100%; /* Prevents exceeding the container width */
+   width: auto; /* Expands as much as possible while maintaining aspect ratio */
+   max-height: 600px; /* Limits the height */
+   height: auto; /* Ensures aspect ratio is preserved */
+   display: block; /* Removes extra space below */
+
 }
+
 
 .section-title {
    font-size: 32px;
    font-family: "Times New Roman", Times, serif;
    text-align: left;
-   padding-left: 20%;
+   padding-left: 0%;
 }
 
 .article-para {
    font-size: 24px;
    text-align: left;
-   padding-left: 20%;
-   padding-right: 20%;
+   padding-left: 0%;
+   padding-right: 0%;
 }
 
 .center-buttons {
@@ -567,6 +583,7 @@ input#r3:checked~.navigation label[for="r3"] {
    min-width: 200px;
    /* Ensure a larger button */
 }
+
 
 
 .footer {
