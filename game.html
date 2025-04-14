@@ -131,7 +131,40 @@
     <li>A bird whose name rhymes with lover</li>
     <li>A bird often times pictured on a snowy branch</li>
 </ol>
+<footer class="footer" style="background: #343a40; color: white; padding: 40px 0; font-size: 18px;">
+    <div class="container">
+        <p class="rights-text" style="text-align: center; margin: 10px 0;">2025 Plumage. All rights reserved.</p>
 
+        <p class="corp" style="text-align: center; margin: 10px 0;">
+            <a href="contact.html" class="text-white"
+                style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Contact Us</a> |
+            <a href="privacy.html" class="text-white"
+                style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Privacy Policy</a>
+        </p>
+
+        <div class="footer-links"
+            style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; justify-items: center; margin-top: 20px;">
+            <div class="footer-one" style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="current.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Current
+                    Issue</a>
+                <a href="contributors.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Contributors</a>
+                <a href="game.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Games</a>
+            </div>
+
+            <div class="footer-two" style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="interview.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Interview</a>
+                <a href="SwanMeme.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">Meme</a>
+                <a href="about.html" class="text-white"
+                    style="color: white; text-decoration: none; font-size: 24px; transition: color 0.3s;">About</a>
+            </div>
+        </div>
+    </div>
+</footer>
 <script>
     var inputs = document.querySelectorAll("input.inpt");
 
@@ -234,11 +267,11 @@
 
             // Check if the input matches the correct answer for that grid
             if (correctAnswers[gridId] && input.value.toLowerCase() === correctAnswers[gridId]) {
-                input.style.backgroundColor = "green";  // Set background color to green
-                input.disabled = true;  // Disable the input field
+                input.style.backgroundColor = "green";
+                input.disabled = true;
             } else {
-                input.style.backgroundColor = "";  // Remove the background color
-                input.disabled = false;  // Re-enable the input field
+                input.style.backgroundColor = "";
+                input.disabled = false;
             }
         });
     });
