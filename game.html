@@ -267,11 +267,11 @@
 
             // Check if the input matches the correct answer for that grid
             if (correctAnswers[gridId] && input.value.toLowerCase() === correctAnswers[gridId]) {
-                input.style.backgroundColor = "green";  // Set background color to green
-                input.disabled = true;  // Disable the input field
+                input.style.backgroundColor = "green";
+                input.disabled = true;
             } else {
-                input.style.backgroundColor = "";  // Remove the background color
-                input.disabled = false;  // Re-enable the input field
+                input.style.backgroundColor = "";
+                input.disabled = false;
             }
         });
     });
