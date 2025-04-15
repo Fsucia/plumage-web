@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spellwordgame</title>
+    <link rel="stylesheet" href="wordgame.css">
+</head>
+
+<body>
+
+    <div class="image">
+        <img src="./issue3/word game.PNG">
+    </div>
+
+    <div class="words">
+        <p>Try to spell as many words as you can with this combination of letters</p>
+        <input type="text" class="answer">
+    </div>
+
+    <div class="game-ui">
+        <p class="timer">Time Left: <span id="time">120</span> seconds</p>
+        <p class="score">Score: <span id="score">0</span></p> <!-- Score section moved here -->
+        <button type="button" class="btn" id="check-btn">Check</button>
+        <button type="button" class="btn" id="show-btn" style="display:none;">Show All Answers</button>
+        <div class="result"></div>
+        <div class="all-answers" style="display:none;"></div>
+    </div>
+
+    <div class="word-stats">
+        <p><strong>Guessed:</strong> <span id="guessed-list">None</span></p>
+        <p><strong>Remaining:</strong> <span id="remaining-count">18</span></p>
+    </div>
+
+    <script src="wordgame.js"></script>
+</body>
+
+</html>
