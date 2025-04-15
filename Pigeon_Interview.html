@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,67 +10,47 @@
   <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
+  
+  <style>
+    /* Flexbox container to display two columns side by side */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; 
+    }
+    .issue-date {
+    text-align: left; 
+    }
+  </style>
 </head>
-<style>
-    h3 {
-        color: var(--deep-blue);
-        font-style: italic;
-        font-family: "Times New Roman", Times, serif;
-    }
-    h6 {
-        font-size: 26px;
-        font-weight: bold;
-        font-family: "Times New Roman", Times, serif;
-        
-    }
-</style>
 
 <body>
   <!-- JS -->
   <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-
+      
   <header class="header">
     <div class="header-background"></div>
     <h1>Plumage</h1>
   </header>
 
   <div id="navbar-container"></div>
+
   <div class="white-line"></div>
   <div class="article-title">
-    <h1>An interview with Adam Betuel, a lover of birds</h1>
-    <h4>Senior Director of Programs at Birds Georgia</h4>
-    <h2>Interviewed by Stephanie Boulard</h2>
+    <h1>An interview with Adam Betuel</h1>
+    <h2>By Steve Place</h2>
   </div>
 
   <main class="content">
     <div class="article-image">
-      <img src=img src="issue3/Julian Pender Hume, cover Extinct Birds_The Passenger Pigeon.jpg"
-                        alt="Lover of Birds">
-      <div class="issue-date">Issue 03 • April 2025</div>
-      <div style='float:left; width:40%; padding-left: 20%;'>
-      <p>Bonjour, cher lecteurs, et bienvenu a un conversation avec Monsieur Adam Betuel Senior Director des Programmes, Birds Georgia et fan du Purple Martin. La, dans le studio j’ai peu parler avec Adam au propos de notre ami, Columba livia, le pigeon urbain. Le lien entre les humanes et les pigeons est long, avec la domestication dès l’animaux dans l’époque do Mésopotamiens Les imagines des pigeons est aussi parmi les Dieux des anciens Grecs. </p>
-      <p>Pour les Grecs, les pigeons symbolisee l’amor, dans leurs colours, souvant blancs, et leurs habitudes de s’accoupler pour vie.  Soit Cupid, ne d’un œuf ou le chariot d’Aphrodites tiree par un couple de pigeon, le pigeon classique est la profession de l’amour. C’est comme ca avec les pigeons. </p>
-    <p>Mais ce n’est pas la vie en rose pour tout nos pigeons nous epliquer Adam, d’ailleurs un especes de pigeonn d’origine Americaine du Nord est disparu.  Le pigeon Passenger, Ectopistes migratorius, étés tués avec un bilan de plus de 5 milliards exterminée dans vingt ans. </p>
-    <p>Adam nous expliquons que la chasse et la perte d’habitats joues des rôles décisifs dans le déclines du Passenger.  Les traits de pigeons évolués des falaises les ont bien adaptés pour la vie urbaine.   Être capable de se percher sur des falaises abruptes ou sous les ponts. Que ces oiseaux soient très malins est toujours un atout.</p> 
-
- 
-
-    <p>Ici, en Atlanta, Adam nous dites que les pigeons permis une florissant populations de prédateurs comme les éperviers.  La capacite de navire, soit par les champs magnétiques, les indices de paysage, et même les étoiles.  L’adaptabilité sers ces pigeons, cars la vie urbaine est pleine de risques. </p> 
-
- 
-
-    <p>Que Adam trouve fascinants ce sont les colores que nous pouvons trouver dans l’espèces.  Ont peut trouver du verte, violet, rose et bleu sur un champ de gris.  Et peut-être pas, peut-être blanc comme dans l’image avec Cupide. </p> 
-
- 
-
-    <p>Aujourd’hui l’image du pigeon n’est pas ci claire que le paravent. La, ont peut remercier Wood Allen, dans sont film, Stardust Memories, il appelle les pigeons, « des rats du ciel », Malheureusement, ce moniker est devenu populaire dans la longue populaire.  D’être vu comme sal n’est pas bon pour un espace, pour cela vous pouvez demander les civettes.  Surtout dans un monde poste-COVID ou en vois que les systèmes sanitaires publiques sons sous spéculations gouvernementales, et en ajoute à cela la grippe aviaire, il y a toujours des risques des pandémiques.  Peut-être plus pressant c’est les immobiles et les chats que mais ces oiseaux le plus a risque. Comme tous les oiseaux.  Merci Adam, de nous éduquer sur les pigeons et de partager cette conversation.  </p> 
-
- 
-
-    <p>Merci chers lecteurs, de prends quelques minutes a discuter notre monde.  Vous pouvez me retrouver le mois prochain quand je vais parler avec Taylor Swift, est nous discuterons les malheurs de l’amour. </p> 
+      <img src="issue3/Julian Pender_Pigeon.jpg" alt="Interview">
+      <div class="issue-date">Issue 03 • April 2025</div> 
     </div>
-    
-    <div style='float:left; width:40%; margin-left:30px;padding-left: 20%;'>
+  </main>
+
+
+  <div class="content">
+    <div class="column">
       <p>Hello, dear readers, and welcome to a
         conversation with Mr. Adam Betuel
         Senior Program Director, Birds Georgia
@@ -141,7 +122,18 @@
           with Taylor Swift as we discuss the
           misfortunes of love.</p>
     </div>
-
+    
+    <div class="column">
+      <p>Bonjour, cher lecteurs, et bienvenu a un conversation avec Monsieur Adam Betuel Senior Director des Programmes, Birds Georgia et fan du Purple Martin. La, dans le studio j’ai peu parler avec Adam au propos de notre ami, Columba livia, le pigeon urbain. Le lien entre les humanes et les pigeons est long, avec la domestication dès l’animaux dans l’époque do Mésopotamiens Les imagines des pigeons est aussi parmi les Dieux des anciens Grecs. </p>
+      <p>Pour les Grecs, les pigeons symbolisee l’amor, dans leurs colours, souvant blancs, et leurs habitudes de s’accoupler pour vie.  Soit Cupid, ne d’un œuf ou le chariot d’Aphrodites tiree par un couple de pigeon, le pigeon classique est la profession de l’amour. C’est comme ca avec les pigeons. </p>
+    <p>Mais ce n’est pas la vie en rose pour tout nos pigeons nous epliquer Adam, d’ailleurs un especes de pigeonn d’origine Americaine du Nord est disparu.  Le pigeon Passenger, Ectopistes migratorius, étés tués avec un bilan de plus de 5 milliards exterminée dans vingt ans. </p>
+    <p>Adam nous expliquons que la chasse et la perte d’habitats joues des rôles décisifs dans le déclines du Passenger.  Les traits de pigeons évolués des falaises les ont bien adaptés pour la vie urbaine.   Être capable de se percher sur des falaises abruptes ou sous les ponts. Que ces oiseaux soient très malins est toujours un atout.</p>   
+    <p>Ici, en Atlanta, Adam nous dites que les pigeons permis une florissant populations de prédateurs comme les éperviers.  La capacite de navire, soit par les champs magnétiques, les indices de paysage, et même les étoiles.  L’adaptabilité sers ces pigeons, cars la vie urbaine est pleine de risques. </p> 
+    <p>Que Adam trouve fascinants ce sont les colores que nous pouvons trouver dans l’espèces.  Ont peut trouver du verte, violet, rose et bleu sur un champ de gris.  Et peut-être pas, peut-être blanc comme dans l’image avec Cupide. </p> 
+    <p>Aujourd’hui l’image du pigeon n’est pas ci claire que le paravent. La, ont peut remercier Wood Allen, dans sont film, Stardust Memories, il appelle les pigeons, « des rats du ciel », Malheureusement, ce moniker est devenu populaire dans la longue populaire.  D’être vu comme sal n’est pas bon pour un espace, pour cela vous pouvez demander les civettes.  Surtout dans un monde poste-COVID ou en vois que les systèmes sanitaires publiques sons sous spéculations gouvernementales, et en ajoute à cela la grippe aviaire, il y a toujours des risques des pandémiques.  Peut-être plus pressant c’est les immobiles et les chats que mais ces oiseaux le plus a risque. Comme tous les oiseaux.  Merci Adam, de nous éduquer sur les pigeons et de partager cette conversation.  </p> 
+    <p>Merci chers lecteurs, de prends quelques minutes a discuter notre monde.  Vous pouvez me retrouver le mois prochain quand je vais parler avec Taylor Swift, est nous discuterons les malheurs de l’amour. </p> 
+    </div>
+  </div>
 
   <script src="assets/js/my_js.js"></script>
 </body>
