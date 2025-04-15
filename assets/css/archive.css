@@ -1,81 +1,108 @@
 /* Features Grid */
+html,
+body {
+   height: 100%;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+
+main {
+   flex: 1;
+}
+
 .issue-grid {
-    display: grid;
-    /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
-    grid-template-columns: repeat(3, 5fr);
-    gap: 2rem;
-    margin-top: 2rem;
- }
- 
- .issue-card {
-    max-width: 300px; /* Adjust as needed */
-    height: auto; /* Let it adjust based on content */
-    padding: 0.8rem; /* Reduce padding */
+   display: grid;
+   /* grid-template-columns: repeat(2, minmax(200px, 1fr)); */
+   grid-template-columns: repeat(3, 5fr);
+   gap: 2rem;
+   margin-top: 2rem;
 }
 
- 
- .issue-card img {
-    display: block;
-    max-width: 100%;
-    height: auto; /* Maintains aspect ratio */
-    object-fit: contain; /* Ensures the whole image fits without cropping */
-    transition: transform 0.3s ease;
+.issue-card {
+   max-width: 300px;
+   /* Adjust as needed */
+   height: auto;
+   /* Let it adjust based on content */
+   padding: 0.8rem;
+   /* Reduce padding */
 }
- 
- .issue-card .img-container {
-    position: relative;
-    display: block;
-    /* Ensures it takes up the full image space */
- }
- 
- .issue-card .img-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    /* Semi-transparent black */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 3;
- }
- 
- .issue-card .img-container:hover::after {
-    opacity: 1;
- }
- 
- .issue-card:hover img {
-    transform: scale(1.01);
- }
- 
- .issue-card h3 {
-    font-family: "Times New Roman", Times, serif;
-    margin: 1rem 0;
-    font-size: 24px;
-    color: var(--deep-blue);
-    font-weight: normal;
- }
- 
- .issue-card h4 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 20px;
-    color: var(--deep-blue);
-    margin: 0.5rem 0;
-    font-weight: normal;
- }
- 
- .issue-card p {
-    font-family: "Times New Roman", Times, serif;
-    font-style: italic;
-    color: #333;
-    margin: 0.5rem 0;
-    font-size: 16px;
- }
 
- .image-view {
+
+.issue-card img {
+   display: block;
    max-width: 100%;
-   max-height: 90vh;  /* Use 90% of the viewport height */
-   object-fit: contain; /* Maintain aspect ratio while fitting */
+   height: auto;
+   /* Maintains aspect ratio */
+   object-fit: contain;
+   /* Ensures the whole image fits without cropping */
+   transition: transform 0.3s ease;
+}
+
+.issue-card .img-container {
+   position: relative;
+   display: block;
+   /* Ensures it takes up the full image space */
+}
+
+.issue-card .img-container::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.3);
+   /* Semi-transparent black */
+   opacity: 0;
+   transition: opacity 0.3s ease;
+   z-index: 3;
+}
+
+.issue-card .img-container:hover::after {
+   opacity: 1;
+}
+
+.issue-card:hover img {
+   transform: scale(1.01);
+}
+
+.issue-card h3 {
+   font-family: "Times New Roman", Times, serif;
+   margin: 1rem 0;
+   font-size: 24px;
+   color: var(--deep-blue);
+   font-weight: normal;
+}
+
+.issue-card h4 {
+   font-family: "Times New Roman", Times, serif;
+   font-size: 20px;
+   color: var(--deep-blue);
+   margin: 0.5rem 0;
+   font-weight: normal;
+}
+
+.issue-card p {
+   font-family: "Times New Roman", Times, serif;
+   font-style: italic;
+   color: #333;
+   margin: 0.5rem 0;
+   font-size: 16px;
+}
+
+.image-view {
+   max-width: 100%;
+   max-height: 90vh;
+   /* Use 90% of the viewport height */
+   object-fit: contain;
+   /* Maintain aspect ratio while fitting */
+}
+
+.footer {
+   margin-top: 450px;
+   width: 350%;
+   margin-left: -560px;
 }
