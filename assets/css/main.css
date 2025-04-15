@@ -301,6 +301,7 @@ input#r3:checked~.navigation label[for="r3"] {
    max-width: 1200px;
    margin: 3rem auto;
    padding: 0 2rem;
+   font-size: 24px;
 }
 
 .issue-info {
