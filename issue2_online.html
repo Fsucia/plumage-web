@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plumage</title>
+
+  <!-- CSS -->
+  <link href="assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/navbar.css" rel="stylesheet">
+
+  <style>
+    /* Center the image */
+    .image-container {
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        height: 100vh;           
+        margin: 0;               
+    }
+
+    #image-view {
+        max-width: 100%;         
+        max-height: 100%;        
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+  }
+
+    .controls button {
+      margin: 0 5px;
+      font-size: 15px;
+  }
+  </style>
+
+</head>
+
+<body>
+    <!-- JS -->
+    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    
+    <header class="header">
+        <div class="header-background"></div>
+        <h1>Plumage</h1>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <div class="white-line"></div>
+    <main class="content">
+        <h1>Plumage: Issue 2</h1>
+        <div class="issue-info">
+            <h2>Le Colombe / The Dove</h2>
+            <div class="issue-date">Issue 02 • March 2025</div>
+        </div>
+    </main> 
+    <div class="image-container">
+        <img id="image-view" src="issue2/1.png">
+    </div>
+
+    <div class="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <script>
+        // Image URLs
+        const images = [
+            'issue2/1.png',
+            'issue2/3.png',
+            'issue2/4.png',
+            'issue2/5.png',
+            'issue2/6.png',
+            'issue2/7.png',
+            'issue2/8.png',
+            'issue2/9.png',
+            'issue2/10.png',
+            'issue2/11.png',
+            'issue2/12.png',
+            'issue2/13.png',
+            'issue2/14.png',
+            'issue2/15.png',
+            'issue2/16.png',
+            'issue2/17.png',
+            'issue2/18.png',
+            'issue2/19.png',
+            'issue2/20.png',
+            'issue2/21.png',
+            'issue2/22.png',
+            'issue2/23.png',
+            'issue2/24.png',  
+        ];
+
+        let currentIndex = 0;
+
+        // Get image element
+        const imageView = document.getElementById('image-view');
+        
+        // Update the image 
+        function updateImage() {
+            imageView.src = images[currentIndex];
+
+           
+        }
+
+        // Previous button
+        document.getElementById('prev').addEventListener('click', function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateImage();
+            }
+        });
+
+        // Next button
+        document.getElementById('next').addEventListener('click', function () {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+                updateImage();
+            }
+        });
+
+        // left and right keyboard navigation 
+        document.addEventListener('keydown', function(event) {
+            if (event.key == 'ArrowLeft' && currentIndex > 0) {
+                currentIndex--;
+                updateImage();
+            } else if (event.key === 'ArrowRight' && currentIndex < images.length - 1) {
+                currentIndex++;
+                updateImage();
+            }
+        });
+    </script>
+        
+<script src="assets/js/my_js.js"></script>
+</body>
+</html>
