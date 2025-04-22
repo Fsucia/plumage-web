@@ -58,7 +58,7 @@
         </div>
     </main> 
     <div class="image-container">
-        <img id="image-view" src="assets/images/Plumage Issue No1 Le Cygne_The Swan-part-1.png">
+        <img id="image-view" src="issue1/Plumage Issue Le Cygne_01 Large.jpeg">
     </div>
 
     <div class="controls">
@@ -69,20 +69,35 @@
     <script>
         // Image URLs
         const images = [
-            'assets/images/Plumage Issue No1 Le Cygne_The Swan-part-1.png',
-            'assets/pdf/Plumage_Issue_No1_Le_Cygne_The_Swan.png',
-            'assets/pdf/P2.png',
-            'assets/pdf/P3.png',
-            'assets/pdf/P4.png',
-            'assets/pdf/P5.png',
-            'assets/pdf/P6.png',
-            'assets/pdf/P7.png',
-            'assets/pdf/P8.png',
-            'assets/pdf/P9.png',
-            'assets/pdf/P10.png',
-            'assets/pdf/P11.png',
-            'assets/pdf/P12.png',
-            
+            'issue1/Plumage Issue Le Cygne_01 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_02 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_03 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_04 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_05 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_06 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_07 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_08 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_09 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_10 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_11 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_12 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_13 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_14 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_15 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_16 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_17 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_18 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_19 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_20 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_21 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_22 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_23 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_24 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_25 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_26 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_27 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_28 Large.jpeg',
+            'issue1/Plumage Issue Le Cygne_29 Large.jpeg',
         ];
 
         let currentIndex = 0;
@@ -92,16 +107,7 @@
         
         // Update the image 
         function updateImage() {
-            imageView.src = images[currentIndex];
-
-            // If the current image is the first one
-            if (currentIndex == 0) {
-                imageView.width = 600;
-                imageView.height = 750;
-            } else {
-                imageView.width = 1250;  
-                imageView.height = 750;
-            }
+            imageView.src = images[currentIndex];  
         }
 
         // Previous button
