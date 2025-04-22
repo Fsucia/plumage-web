@@ -30,6 +30,8 @@
         <input type="radio" name="r" id="r1" checked>
         <input type="radio" name="r" id="r2">
         <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
 
         <div class="sliderwrap">
             <div class="slide">
@@ -41,29 +43,42 @@
                 <a href="SwanArt.html">
                     <img src="./assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="image one">
                 </a>
-                <!-- comment -->
             </div>
             <div class="slide">
                 <div class="slider-text">
                     <h3>The Swan Stories</h3>
-
                     <p>By Baudelaire and Victor Hugo</p>
                 </div>
                 <a href="SwanStories.html">
                     <img src="./assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="image two">
                 </a>
-
             </div>
             <div class="slide">
                 <div class="slider-text">
                     <h3>Bird of The Month</h3>
-
                     <p>By Collin Agarwal and Karen Zheng</p>
                 </div>
                 <a href="SwanoftheMonth.html">
                     <img src="./assets/images/Swan pic Webpage_Bird of the Month.jpg" alt="image three">
                 </a>
-
+            </div>
+            <div class="slide">
+                <div class="slider-text">
+                    <h3>Understanding Pigeons</h3>
+                    <p>by Aidan Zeissner</p>
+                </div>
+                <a href="Pigeon_Understand.html">
+                    <img src="./issue3/AIDANZEISSNER_ISSUE3_UnderstandingPigeons_IMAGE5.jpg" alt="image four">
+                </a>
+            </div>
+            <div class="slide">
+                <div class="slider-text">
+                    <h3>Pigeon Stories</h3>
+                    <p>By Mialla Klohr</p>
+                </div>
+                <a href="PigeonStories.html">
+                    <img src="./issue3/D996-1-13440 (1).jpg" alt="image five">
+                </a>
             </div>
         </div>
 
@@ -71,15 +86,18 @@
             <label for="r1" class="bar"></label>
             <label for="r2" class="bar"></label>
             <label for="r3" class="bar"></label>
+            <label for="r4" class="bar"></label> <!-- Add this -->
+            <label for="r5" class="bar"></label> <!-- And this -->
         </div>
     </div>
+
     <div id="navbar">
         <nav class="navbar navbar-expand-lg bg-custom" style="min-height: 60px"></nav>
     </div>
 
     <script>
         let currentIndex = 1;
-        const totalSlides = 3;
+        const totalSlides = 5;
         let autoSlide = setInterval(nextSlide, 4500);
 
         function nextSlide() {
@@ -95,6 +113,7 @@
         });
     </script>
 
+
     <main class="content">
         <hr class="lines">
         <div class="quotebox">
@@ -104,9 +123,9 @@
         </div>
         <hr>
         <div class="features-grid">
-            
 
-           
+
+
             <div class="feature-card">
                 <a class="img-container" href="SwanStories.html"><img
                         src="assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories"></a>
@@ -117,8 +136,8 @@
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href=SwanArt.html><img src="assets/images/leda-and-the-swan pic_Webpage_Arts.jpg"
-                        alt="Leda and the Swan"></a>
+                <a class="img-container" href=SwanArt.html><img
+                        src="assets/images/leda-and-the-swan pic_Webpage_Arts.jpg" alt="Leda and the Swan"></a>
                 <a href=SwanArt.html>
                     <h3>Art: A Special Section</h3>
                 </a>
@@ -138,8 +157,8 @@
 
 
             <div class="feature-card">
-                <a class="img-container" href=Pigeon_Understand.html><img src="issue3/AIDANZEISSNER_ISSUE3_UnderstandingPigeons_IMAGE5.jpg"
-                        alt="Leda and the Swan"></a>
+                <a class="img-container" href=Pigeon_Understand.html><img
+                        src="issue3/AIDANZEISSNER_ISSUE3_UnderstandingPigeons_IMAGE5.jpg" alt="Leda and the Swan"></a>
                 <a href=Pigeon_Understand.html>
                     <h3>Understanding Pigeons</h3>
                 </a>
@@ -147,8 +166,8 @@
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href="PigeonoftheMonth.html"><img
-                        src="issue3/Milliken_3_Oiseau_du_Moi_3.png" alt="Bird of the Month"></a>
+                <a class="img-container" href="PigeonoftheMonth.html"><img src="issue3/Milliken_3_Oiseau_du_Moi_3.png"
+                        alt="Bird of the Month"></a>
                 <a href="PigeonoftheMonth.html">
                     <h3>Bird of the Month</h3>
                 </a>
@@ -156,14 +175,14 @@
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href="Pigeon_Birdwatchers.html"><img src="issue3/ChloeSpikula_3_UnApercuDeGTBirdwatchers_MainImage.jpeg"
-                        alt="Bird Watcher"></a>
+                <a class="img-container" href="Pigeon_Birdwatchers.html"><img
+                        src="issue3/ChloeSpikula_3_UnApercuDeGTBirdwatchers_MainImage.jpeg" alt="Bird Watcher"></a>
                 <a href="Pigeon_Birdwatchers.html">
                     <h3>A Look at GT Birdwatchers</h3>
                 </a>
                 <p>By Chloe Spikula</p>
             </div>
-            
+
         </div>
     </main>
     <footer class="footer bg-dark text-white mt-5 py-4">
@@ -171,21 +190,20 @@
             <p class="rights-text">2025 Plumage. All rights reserved.</p>
 
             <p class="corp">
-                <a href="contact.html" class="text-white">Contact Us</a> |
-                <a href="privacy.html" class="text-white">Privacy Policy</a>
+                <a href="contact.html" class="text-white">Contact Us</a>
             </p>
 
             <div class="footer-links">
                 <div class="footer-one">
-                    <a href="current.html" class="text-white">Current Issue</a>
+                    <a href="issue3.html" class="text-white">Current Issue</a>
                     <a href="contributors.html" class="text-white">Contributors</a>
-                    <a href="game.html" class="text-white">Games</a>
+                    <a href="allgames.html" class="text-white">Games</a>
                 </div>
 
                 <div class="footer-two">
-                    <a href="interview.html" class="text-white">Interview</a>
-                    <a href="SwanMeme.html" class="text-white">Meme</a>
-                    <a href="about.html" class="text-white">About</a>
+                    <a href="Pigeon_Interview.html" class="text-white">Interview</a>
+                    <a href="archive.html" class="text-white">Archives</a>
+                    <a href="https://vip.gatech.edu/teams/vwx" class="text-white">VIP project</a>
                 </div>
             </div>
         </div>
