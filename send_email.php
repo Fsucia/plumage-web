@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars(trim($_POST["email"]));
     $subject = htmlspecialchars(trim($_POST["subject"]));
     $message = htmlspecialchars(trim($_POST["message"]));
-=
+
     $body = "You have received a new message from the contact form.\n\n";
     $body .= "Name: $name\n";
     $body .= "Email: $email\n\n";
