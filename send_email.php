@@ -1,35 +1,31 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "kzheng92@gatech.edu"; // Change this to your real email address
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$subject = $_POST["subject"];
-$message = $_POST["message"];
+    // Sanitize form inputs
+    $name = htmlspecialchars(trim($_POST["name"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
+    $subject = htmlspecialchars(trim($_POST["subject"]));
+    $message = htmlspecialchars(trim($_POST["message"]));
 
-require "vendor/autoload.php";
+    // Message body
+    $body = "You have received a new message from the contact form.\n\n";
+    $body .= "Name: $name\n";
+    $body .= "Email: $email\n\n";
+    $body .= "Message:\n$message";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+    // Email headers
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
 
-$mail = new PHPMailer(true);
-
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;
-
-$mail->isSMTP();
-$mail->SMTPAuth = true;
-
-$mail->Host = "smtp.example.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
-
-$mail->Username = "";
-$mail->Password = "";
-
-$mail->setFrom($email, $name);
-$mail->addAddress("", "Recipient");
-
-$mail->Subject = $subject;
-$mail->Body = $message;
-
-$mail->send();
-
-header("Location: sent.html");
+    // Attempt to send email
+    if (mail($to, $subject, $body, $headers)) {
+        header("Location: sent.html"); // Redirect to thank you page
+        exit();
+    } else {
+        echo "Sorry, something went wrong. Email couldn't be sent.";
+    }
+} else {
+    echo "Invalid request method.";
+}
+?>
