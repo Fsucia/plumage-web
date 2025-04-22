@@ -1,11 +1,17 @@
+function startGame() {
+    document.getElementById("instructions-screen").style.display = "none";
+    document.getElementById("game-container").style.display = "block";
+}
+
 const validWords = [
     "PIGEON",
     "GONE", "NOPE", "OPEN", "PINE", "PING", "PONG",
     "EGO", "EON", "GIN", "ION", "NIP", "ONE", "PEG", "PEN", "PIE", "PIG", "PIN"
 ];
 
-const answerInput = document.querySelector(".answer");
-const checkBtn = document.querySelector(".btn");
+const answerInput = document.getElementById("answer");
+const checkBtn = document.getElementById("check-btn");
+
 
 const result = document.querySelector(".result");
 const scoreDisplay = document.querySelector("#score");
