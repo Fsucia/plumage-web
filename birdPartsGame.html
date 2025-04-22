@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumage</title>
+
+    <!-- CSS -->
+    <link href="../assets/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <link href="../assets/css/navbar.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- JS -->
+    <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="assets/BirdPartsGame/Build/BirdPartsGame.loader.js"></script>
+
+    <header class="header">
+        <div class="header-background"></div>
+        <h1>Plumage</h1>
+    </header>
+
+    <div id="navbar-container"></div>
+
+    <main class="content">
+        <h1>Name The Bird Parts</h1>
+
+        <div id="unityContainer"></div>
+    </main>
+
+    <script src="../assets/js/my_js.js"></script>
+    <!-- Unity WebGL Game Setup -->
+    <script>
+        var canvas = document.createElement("canvas");
+        canvas.id = "unity-canvas";
+        canvas.width = 960;
+        canvas.height = 600;
+        canvas.tabIndex = -1;
+    
+        var container = document.getElementById("unityContainer");
+        container.appendChild(canvas);
+    
+        var buildUrl = "assets/BirdPartsGame/Build";
+        var loaderUrl = buildUrl + "/BirdPartsGame.loader.js";
+    
+        var config = {
+        dataUrl: buildUrl + "/BirdPartsGame.data.br",
+        frameworkUrl: buildUrl + "/BirdPartsGame.framework.js.br",
+        codeUrl: buildUrl + "/BirdPartsGame.wasm.br",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "EggWordSearch",
+        productVersion: "1.0",
+        showBanner: function(msg, type) {
+            console.log(`${type}: ${msg}`);
+        }
+        };
+    
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+            // Optionally show loading progress
+        }).then((unityInstance) => {
+            // Unity loaded successfully
+        }).catch((message) => {
+            alert("Failed to load Unity: " + message);
+        });
+        };
+    
+        document.body.appendChild(script);
+    </script>
+  
+</body>
+
+<footer class="footer bg-dark text-white mt-5 py-4">
+    <div class="container">
+        <p class="rights-text">2025 Plumage. All rights reserved.</p>
+
+        <p class="corp">
+            <a href="contact.html" class="text-white">Contact Us</a>
+        </p>
+
+        <div class="footer-links">
+            <div class="footer-one">
+                <a href="issue3.html" class="text-white">Current Issue</a>
+                <a href="contributors.html" class="text-white">Contributors</a>
+                <a href="allgames.html" class="text-white">Games</a>
+            </div>
+
+            <div class="footer-two">
+                <a href="Pigeon_Interview.html" class="text-white">Interview</a>
+                <a href="archive.html" class="text-white">Archives</a>
+                <a href="https://vip.gatech.edu/teams/vwx" class="text-white">VIP project</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
