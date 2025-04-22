@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Word Game</title>
+    <link rel="stylesheet" href="wordgame.css">
+    <style>
+        .instructions-screen {
+            text-align: center;
+            max-width: 700px;
+            margin: 80px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+
+        .instructions-screen ul {
+            text-align: left;
+            margin: 20px auto;
+            padding-left: 20px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Instructions Screen -->
+    <div class="instructions-screen" id="instructions-screen">
+        <h1>🧠 Spell Word Game Instructions</h1>
+        <ul>
+            <li>Form as many valid words as you can using the given letters.</li>
+            <li>You have <strong>120 seconds</strong> to guess!</li>
+            <li>Each correct word gets you 1 point.</li>
+            <li>Words cannot be reused.</li>
+        </ul>
+        <button class="btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container" style="display: none;">
+
+        <div class="image">
+            <img src="./issue3/word game.PNG" alt="Word Game Letters">
+        </div>
+
+        <div class="words">
+            <p>Try to spell as many words as you can with this combination of letters</p>
+            <input type="text" class="answer">
+        </div>
+
+        <div class="game-ui">
+            <p class="timer">Time Left: <strong><span id="time">120</span></strong> seconds</p>
+            <p class="score">Score: <span id="score">0</span></p>
+            <button type="button" class="btn" id="check-btn">Check</button>
+            <button type="button" class="btn" id="show-btn" style="display:none;">Show All Answers</button>
+            <div class="result"></div>
+            <div class="all-answers" style="display:none;"></div>
+        </div>
+
+        <div class="word-stats">
+            <p><strong>Guessed:</strong> <span id="guessed-list">None</span></p>
+            <p><strong>Remaining:</strong> <span id="remaining-count">18</span></p>
+        </div>
+    </div>
+
+    <script>
+        function startGame() {
+            document.getElementById("instructions-screen").style.display = "none";
+            document.getElementById("game-container").style.display = "block";
+
+            const validWords = [
+                "PIGEON", "GONE", "NOPE", "OPEN", "PINE", "PING", "PONG",
+                "EGO", "EON", "GIN", "ION", "NIP", "ONE", "PEG", "PEN", "PIE", "PIG", "PIN"
+            ];
+
+            const answerInput = document.querySelector(".answer");
+            const checkBtn = document.getElementById("check-btn");
+            const result = document.querySelector(".result");
+            const scoreDisplay = document.querySelector("#score");
+            const timerDisplay = document.querySelector("#time");
+
+            let score = 0;
+            let usedWords = new Set();
+            let timeLeft = 120;
+
+            const guessedList = document.getElementById("guessed-list");
+            const remainingCount = document.getElementById("remaining-count");
+
+            checkBtn.addEventListener("click", () => {
+                const word = answerInput.value.trim().toUpperCase();
+
+                if (word === "") {
+                    result.textContent = "❗ Enter a word.";
+                } else if (usedWords.has(word)) {
+                    result.textContent = `⚠️ You've already used "${word}".`;
+                } else if (validWords.includes(word)) {
+                    usedWords.add(word);
+                    score++;
+                    scoreDisplay.textContent = score;
+                    guessedList.textContent = [...usedWords].join(", ");
+                    remainingCount.textContent = validWords.length - usedWords.size;
+                    result.textContent = `✅ "${word}" is valid!`;
+                } else {
+                    result.textContent = `❌ "${word}" is not a valid word.`;
+                }
+
+                answerInput.value = "";
+                answerInput.focus();
+            });
+
+            const timer = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    result.textContent = "⏰ Time's up!";
+                    checkBtn.disabled = true;
+                    answerInput.disabled = true;
+                    remainingCount.textContent = validWords.length - usedWords.size;
+                }
+            }, 1000);
+        }
+    </script>
+
+</body>
+
+</html>

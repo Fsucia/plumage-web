@@ -124,8 +124,6 @@ h1 img {
    font-weight: bold;
    background: #F4FFF0;
    color: black;
-
-
 }
 
 .slider-text h3 {
@@ -150,10 +148,6 @@ h1 img {
    color: #333;
    margin: 0.5rem 0;
    font-size: 20px;
-}
-
-.slider-text p {
-
    margin-left: 85px;
    height: auto;
 }
@@ -162,9 +156,12 @@ input[type="radio"] {
    display: none;
 }
 
+/* Updated selectors for all 5 slides */
 input#r1:checked~.sliderwrap .slide:nth-child(1),
 input#r2:checked~.sliderwrap .slide:nth-child(2),
-input#r3:checked~.sliderwrap .slide:nth-child(3) {
+input#r3:checked~.sliderwrap .slide:nth-child(3),
+input#r4:checked~.sliderwrap .slide:nth-child(4),
+input#r5:checked~.sliderwrap .slide:nth-child(5) {
    opacity: 1;
    pointer-events: auto;
 }
@@ -241,7 +238,9 @@ input[type="radio"]:checked+.bar {
 
 input#r1:checked~.navigation label[for="r1"],
 input#r2:checked~.navigation label[for="r2"],
-input#r3:checked~.navigation label[for="r3"] {
+input#r3:checked~.navigation label[for="r3"],
+input#r4:checked~.navigation label[for="r4"],
+input#r5:checked~.navigation label[for="r5"] {
    background: black;
    /* Turn black when active */
 }
@@ -301,6 +300,7 @@ input#r3:checked~.navigation label[for="r3"] {
    max-width: 1200px;
    margin: 3rem auto;
    padding: 0 2rem;
+   font-size: 24px;
 }
 
 .issue-info {
@@ -455,7 +455,8 @@ input#r3:checked~.navigation label[for="r3"] {
 .feature-card .img-container {
    position: relative;
    display: block;
-   aspect-ratio: 3 / 2; /* Maintains a consistent aspect ratio */
+   aspect-ratio: 3 / 2;
+   /* Maintains a consistent aspect ratio */
    max-height: 400px;
    overflow: hidden;
    /* Ensures it takes up the full image space */
@@ -540,11 +541,16 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 .article-image img {
-   max-width: 100%; /* Prevents exceeding the container width */
-   width: auto; /* Expands as much as possible while maintaining aspect ratio */
-   max-height: 600px; /* Limits the height */
-   height: auto; /* Ensures aspect ratio is preserved */
-   display: block; /* Removes extra space below */
+   max-width: 100%;
+   /* Prevents exceeding the container width */
+   width: auto;
+   /* Expands as much as possible while maintaining aspect ratio */
+   max-height: 600px;
+   /* Limits the height */
+   height: auto;
+   /* Ensures aspect ratio is preserved */
+   display: block;
+   /* Removes extra space below */
 
 }
 
@@ -585,3 +591,53 @@ input#r3:checked~.navigation label[for="r3"] {
 }
 
 
+
+.footer {
+   background: #343a40;
+   /* Dark background */
+   color: white;
+   padding: 40px 0;
+   font-size: 18px;
+}
+
+/* Centering the rights and corp links */
+.rights-text,
+.corp {
+   text-align: center;
+   margin: 10px 0;
+}
+
+/* Footer link sections */
+.footer-links {
+   display: grid;
+   /* Use grid for 2 rows */
+   grid-template-columns: repeat(2, 1fr);
+   /* Two equal-width columns */
+   gap: 20px;
+
+   justify-items: center;
+
+   margin-top: 20px;
+}
+
+
+.footer-one,
+.footer-two {
+   display: flex;
+   flex-direction: column;
+
+   gap: 15px;
+
+}
+
+.footer a {
+   font-size: 24px;
+
+   text-decoration: none;
+   transition: color 0.3s;
+}
+
+.footer a:hover {
+   color: #f8b400;
+
+}
