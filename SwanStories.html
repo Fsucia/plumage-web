@@ -10,32 +10,46 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/navbar.css" rel="stylesheet">
   
+  <style>
+    /* Flexbox container to display two columns side by side */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px; 
+    }
+    .issue-date {
+    text-align: left; 
+    }
+  </style>
 </head>
 
 <body>
-    <!-- JS -->
-    <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-    
-    <header class="header">
-        <div class="header-background"></div>
-        <h1>Plumage</h1>
-    </header>
+  <!-- JS -->
+  <script src="assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+      
+  <header class="header">
+    <div class="header-background"></div>
+    <h1>Plumage</h1>
+  </header>
 
-    <div id="navbar-container"></div>
+  <div id="navbar-container"></div>
 
-    <div class="white-line"></div>
-    <div class="article-title">
-      <h1>The Swan Stories</h1>
-      <h2>By Charles Baudelaire and Victor Hugo</h2>
+  <div class="white-line"></div>
+  <div class="article-title">
+    <h1>The Swan Stories</h1>
+    <h2>By Charles Baudelaire and Victor Hugo</h2>
+    <h2>Choosen By Stephanie Boulard</h2>
+  </div>
+
+  <main class="content">
+    <div class="article-image">
+      <img src="assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
+      <div class="issue-date">Issue 01 • December 2024</div>
     </div>
-    <main class="content">
-      <div class="article-image">
-        <img src="assets/images/Victor_Hugo pic_Webpage_Stories.jpg" alt="The Swan Stories">
-        <div class="issue-date">Issue 01 • December 2024</div>
-        </div>
-      <p>
-        <h1 class = "section-title"> Context</h1>
-        <p class = "article-para">
+  </main>
+  <main class="content"><h1>Context</h1></main>
+  <main class="content">
+        <p>
         In 1859, the French poet Charles Baudelaire
         (1821-1867) sent a poem to French writer Victor
         Hugo (1802-1885) in exile in Guernsey. In his
@@ -61,10 +75,79 @@
         is given to swans by a bourgeois family in the
         Luxembourg Gardens.       
         </p>
-      </p>
- 
-    <div style='float:left; width:40%; padding-left: 20%;'>
-        <p><h5>Le Cygne by Charles Baudelaire In French</h5></p>
+  </main>
+  
+
+
+  <div class="content">
+    <div>
+      <p><h3>The Swan by Charles Baudelaire in English</h3></p>
+      <p>To Victor Hugo</p>
+<p>I</p>
+<p>Andromache, I think of you! That little stream,
+That mirror, poor and sad, which glittered long ago
+With the vast majesty of your widow’s grieving,
+That false Simois swollen by your tears,</p>
+<p>Suddenly made fruitful my teeming memory,
+As I walked across the new Carrousel.
+Old Paris is no more (the form of a city
+Changes more quickly, alas! than the human heart);</p>
+<p>I see only in memory that camp of stalls,
+Those piles of shafts, of rough hewn cornices, the grass,
+The huge stone blocks stained green in puddles of water,
+And in the windows shine the jumbled bric-a-brac.</p>
+<p>Once a menagerie was set up there;
+There, one morning, at the hour when Labor awakens,
+Beneath the clear, cold sky when the dismal hubbub
+Of street-cleaners and scavengers breaks the silence,</p>
+<p>I saw a swan that had escaped from his cage,
+That stroked the dry pavement with his webbed feet
+And dragged his white plumage over the uneven ground.
+Beside a dry gutter the bird opened his beak,</p>
+<p>Restlessly bathed his wings in the dust
+And cried, homesick for his fair native lake:
+“Rain, when will you fall? Thunder, when will you roll?”
+I see that hapless bird, that strange and fatal myth,</p>
+<p>Toward the sky at times, like the man in Ovid,
+Toward the ironic, cruelly blue sky,
+Stretch his avid head upon his quivering neck,
+As if he were reproaching God!</p>
+<p>II</p>
+<p>Paris changes! but naught in my melancholy
+Has stirred! New palaces, scaffolding, blocks of stone,
+Old quarters, all become for me an allegory,
+And my dear memories are heavier than rocks.</p>
+<p>So, before the Louvre, an image oppresses me:
+I think of my great swan with his crazy motions, </p>
+<p>Ridiculous, sublime, like a man in exile,
+Relentlessly gnawed by longing! and then of you, </p>
+<p>Andromache, base chattel, fallen from the embrace
+Of a mighty husband into the hands of proud Pyrrhus,
+Standing bowed in rapture before an empty tomb,
+Widow of Hector, alas! and wife of Helenus! 
+</p>
+<p>
+I think of the negress, wasted and consumptive,
+Trudging through muddy streets, seeking with a fixed gaze
+The absent coco-palms of splendid Africa
+Behind the immense wall of mist; 
+</p>
+<p>Of whoever has lost that which is never found
+Again! Never! Of those who deeply drink of tears
+And suckle Pain as they would suck the good she-wolf!
+Of the puny orphans withering like flowers! 
+</p>
+<p>Thus in the dim forest to which my soul withdraws,
+An ancient memory sounds loud the hunting horn!
+I think of the sailors forgotten on some isle,
+Of the captives, of the vanquished!...of many others too! </p>
+<p>— Charles Baudelaire
+translated by William Aggeler, The Flowers of Evil (Fresno,
+CA: Academy Library Guild, 1954) </p>
+      </div>
+
+      <div class="column" style="color: rgba(12, 78, 97)">
+        <p><h3>Le Cygne by Charles Baudelaire In French</h3></p>
         <p>À Victor Hugo</p>
         <p>I</p>
         <p>Andromaque, je pense à vous! Ce petit fleuve,
@@ -122,82 +205,20 @@
           Aux captifs, aux vaincus!... à bien d’autres encor! 
           </p>
         <p>— Charles Baudelaire, Les Fleurs du mal (1861)</p>
-    </div>
-    
-    <div style='float:left; width:40%; margin-left:30px;padding-left: 20%;'>
-       <p><h5>The Swan by Charles Baudelaire in English</h5></p>
-        <p>To Victor Hugo</p>
-<p>I</p>
-<p>Andromache, I think of you! That little stream,
-That mirror, poor and sad, which glittered long ago
-With the vast majesty of your widow’s grieving,
-That false Simois swollen by your tears,</p>
-<p>Suddenly made fruitful my teeming memory,
-As I walked across the new Carrousel.
-Old Paris is no more (the form of a city
-Changes more quickly, alas! than the human heart);</p>
-<p>I see only in memory that camp of stalls,
-Those piles of shafts, of rough hewn cornices, the grass,
-The huge stone blocks stained green in puddles of water,
-And in the windows shine the jumbled bric-a-brac.</p>
-<p>Once a menagerie was set up there;
-There, one morning, at the hour when Labor awakens,
-Beneath the clear, cold sky when the dismal hubbub
-Of street-cleaners and scavengers breaks the silence,</p>
-<p>I saw a swan that had escaped from his cage,
-That stroked the dry pavement with his webbed feet
-And dragged his white plumage over the uneven ground.
-Beside a dry gutter the bird opened his beak,</p>
-<p>Restlessly bathed his wings in the dust
-And cried, homesick for his fair native lake:
-“Rain, when will you fall? Thunder, when will you roll?”
-I see that hapless bird, that strange and fatal myth,</p>
-<p>Toward the sky at times, like the man in Ovid,
-Toward the ironic, cruelly blue sky,
-Stretch his avid head upon his quivering neck,
-As if he were reproaching God!</p>
-<p>II</p>
-<p>Paris changes! but naught in my melancholy
-Has stirred! New palaces, scaffolding, blocks of stone,
-Old quarters, all become for me an allegory,
-And my dear memories are heavier than rocks.</p>
-<p>So, before the Louvre, an image oppresses me:
-I think of my great swan with his crazy motions, </p>
-<p>Ridiculous, sublime, like a man in exile,
-  Relentlessly gnawed by longing! and then of you, </p>
-<p>Andromache, base chattel, fallen from the embrace
-  Of a mighty husband into the hands of proud Pyrrhus,
-  Standing bowed in rapture before an empty tomb,
-  Widow of Hector, alas! and wife of Helenus! 
-</p>
-<p>
-  I think of the negress, wasted and consumptive,
-Trudging through muddy streets, seeking with a fixed gaze
-The absent coco-palms of splendid Africa
-Behind the immense wall of mist; 
-</p>
-<p>Of whoever has lost that which is never found
-  Again! Never! Of those who deeply drink of tears
-  And suckle Pain as they would suck the good she-wolf!
-  Of the puny orphans withering like flowers! 
-  </p>
-<p>Thus in the dim forest to which my soul withdraws,
-  An ancient memory sounds loud the hunting horn!
-  I think of the sailors forgotten on some isle,
-  Of the captives, of the vanquished!...of many others too! </p>
-<p>— Charles Baudelaire
-  translated by William Aggeler, The Flowers of Evil (Fresno,
-  CA: Academy Library Guild, 1954) </p>
-    </div>
-  <div style='float:left'>
-     <p><h5><i>Les Miserables</i>, Chapter XVI, “How from a Brother One Becomes a Father”  by Victor Hugo  [Original French Below]</h5></p>
+      </div>
+  </div>
+
+  <main class="content">
+    <p><h5><i>Les Miserables</i>, Chapter XVI, “How from a Brother One Becomes a Father”  by Victor Hugo  [Original French Below]</h5></p>
+  </main>
+  <main class="content">
      At that same moment, in the garden of the Luxembourg,—for the gaze of the drama must be everywhere present,—two children were holding each other by the hand. One might have been seven years old, the other five. The rain having soaked them, they were walking along the paths on the sunny side; the elder was leading the younger; they were pale and ragged; they had the air of wild birds. The smaller of them said: “I am very hungry.”  
 <br>
 The elder, who was already somewhat of a protector, was leading his brother with his left hand and in his right he carried a small stick.  
 <br>
 They were alone in the garden. The garden was deserted, the gates had been closed by order of the police, on account of the insurrection. The troops who had been bivouacking there had departed for the exigencies of combat.  
 <br>
-How did those children come there? Perhaps they had escaped from some guard-house which stood ajar; perhaps there was in the vicinity, at the Barrière d’Enfer; or on the Esplanade de l’Observatoire, or in the neighboring carrefour, dominated by the pediment on which could be read: <i>Invenerunt parvulum pannis involutum</i>, some mountebank’s booth from which they had fled; perhaps they had, on the preceding evening, escaped the eye of the inspectors of the garden at the hour of closing, and had passed the night in some one of those sentry-boxes where people read the papers? The fact is, they were stray lambs and they seemed free. To be astray and to seem free is to be lost. These poor little creatures were, in fact, lost.  
+How did those children come there? Perhaps they had escaped from some guard-house which stood ajar; perhaps there was in the vicinity, at the Barrière d’Enfer; or on the Esplanade de l’Observatoire, or in the neighboring carrefour, dominated by the pediment on which could be read: Invenerunt parvulum pannis involutum, some mountebank’s booth from which they had fled; perhaps they had, on the preceding evening, escaped the eye of the inspectors of the garden at the hour of closing, and had passed the night in some one of those sentry-boxes where people read the papers? The fact is, they were stray lambs and they seemed free. To be astray and to seem free is to be lost. These poor little creatures were, in fact, lost.  
 <br>
 […] 
 <br>
@@ -328,18 +349,18 @@ As soon as they had disappeared from view, the elder child hastily flung himself
 <br>
 Translated by Isabel F. Hapgood, Thomas Y. Crowell & Co. No. 13, Astor Place 
 New York, 1887 
-  </div>
-  <br>
-  <br>
-  <div style="float:left">
-    <p><h5><i>Les Misérables</i>, Tome 5, Livre 1, Chapitre XVI, "Comment de frère on devient père"</h5></p>
+  </main>
+
+  <main class="content" style="color: rgba(12, 78, 97)">
+    <p><h5><i>Les Misérables</i>, Tome 5, Livre 1, Chapitre XVI, "Comment de frère on devient père"</h5></p></main>
+    <main class="content"style="color: rgba(12, 78, 97)">
     Il y avait en ce moment-là même dans le jardin du Luxembourg, — car le regard du drame doit être présent partout, — deux enfants qui se tenaient par la main. L’un pouvait avoir sept ans, l’autre cinq. La pluie les ayant mouillés, ils marchaient dans les allées du côté du soleil ; l’aîné conduisait le petit ; ils étaient en haillons et pâles ; ils avaient un air d’oiseaux fauves. Le plus petit disait : J’ai bien faim.  
 <br>
 L’aîné, déjà un peu protecteur, conduisait son frère de la main gauche et avait une baguette dans sa main droite.  
 <br>
 Ils étaient seuls dans le jardin. Le jardin était désert, les grilles étaient fermées par mesure de police à cause de l’insurrection. Les troupes qui y avaient bivouaqué en étaient sorties pour les besoins du combat.  
 <br>
-Comment ces enfants étaient-ils là ? Peut-être s’étaient-ils évadés de quelque corps de garde entre-bâillé ; peut-être aux environs, à la barrière d’Enfer, ou sur l’esplanade de l’Observatoire, ou dans le carrefour voisin dominé par le fronton où on lit : <i>invenerunt parvulum pannis involutum</i>, y avait-il quelque baraque de saltimbanques dont ils s’étaient enfuis ; peut-être avaient-ils, la veille au soir, trompé l’œil des inspecteurs du jardin à l’heure de la clôture, et avaient-ils passé la nuit dans quelqu’une de ces guérites où on lit les journaux ? Le fait est qu’ils étaient errants et qu’ils semblaient libres. Être errant et sembler libre, c’est être perdu. Ces pauvres petits étaient perdus en effet.  
+Comment ces enfants étaient-ils là ? Peut-être s’étaient-ils évadés de quelque corps de garde entre-bâillé ; peut-être aux environs, à la barrière d’Enfer, ou sur l’esplanade de l’Observatoire, ou dans le carrefour voisin dominé par le fronton où on lit : invenerunt parvulum pannis involutum, y avait-il quelque baraque de saltimbanques dont ils s’étaient enfuis ; peut-être avaient-ils, la veille au soir, trompé l’œil des inspecteurs du jardin à l’heure de la clôture, et avaient-ils passé la nuit dans quelqu’une de ces guérites où on lit les journaux ? Le fait est qu’ils étaient errants et qu’ils semblaient libres. Être errant et sembler libre, c’est être perdu. Ces pauvres petits étaient perdus en effet.  
 <br>
 […]
 <br>
@@ -469,8 +490,9 @@ Dès qu’ils ne furent plus en vue, l’aîné se coucha vivement à plat ventr
 <br>
 
 </div>
-    </main>
+ </main>
 
+ 
     <script src="assets/js/my_js.js"></script>
 </body>
 </html>
