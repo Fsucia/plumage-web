@@ -28,51 +28,10 @@
     <main class="content">
         <h1>Name The Bird Parts</h1>
 
-        <div id="unityContainer"></div>
+        <iframe frameborder="0" src="https://itch.io/embed-upload/13525760?color=333333" allowfullscreen="" width="980" height="640"><a href="https://ivtwo.itch.io/birdlabelgame">Play BirdLabelGame on itch.io</a></iframe>
+        <!-- <iframe frameborder="0" src="https://itch.io/embed/3514636" width="552" height="167"><a href="https://ivtwo.itch.io/birdlabelgame">BirdLabelGame by IvTwo</a></iframe> -->
     </main>
 
-    <script src="../assets/js/my_js.js"></script>
-    <!-- Unity WebGL Game Setup -->
-    <script>
-        var canvas = document.createElement("canvas");
-        canvas.id = "unity-canvas";
-        canvas.width = 960;
-        canvas.height = 600;
-        canvas.tabIndex = -1;
-    
-        var container = document.getElementById("unityContainer");
-        container.appendChild(canvas);
-    
-        var buildUrl = "assets/BirdPartsGame/Build";
-        var loaderUrl = buildUrl + "/BirdPartsGame.loader.js";
-    
-        var config = {
-        dataUrl: buildUrl + "/BirdPartsGame.data.br",
-        frameworkUrl: buildUrl + "/BirdPartsGame.framework.js.br",
-        codeUrl: buildUrl + "/BirdPartsGame.wasm.br",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "EggWordSearch",
-        productVersion: "1.0",
-        showBanner: function(msg, type) {
-            console.log(`${type}: ${msg}`);
-        }
-        };
-    
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            // Optionally show loading progress
-        }).then((unityInstance) => {
-            // Unity loaded successfully
-        }).catch((message) => {
-            alert("Failed to load Unity: " + message);
-        });
-        };
-    
-        document.body.appendChild(script);
-    </script>
   
 </body>
 
