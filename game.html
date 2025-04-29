@@ -30,7 +30,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td id="30"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="100"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -52,7 +52,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td id="31"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="101"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -63,7 +63,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td id="32"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="102"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -74,7 +74,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="103"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -85,7 +85,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="104"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -96,7 +96,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="105"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -107,7 +107,7 @@
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
-            <td><input class="inpt" type="text"></input></td>
+            <td id="106"><input class="inpt" type="text"></input></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
             <td><input type="text" value="" readonly class="dark"></td>
@@ -132,6 +132,26 @@
         <li>A bird whose name rhymes with lover</li>
         <li>A bird often times pictured on a snowy branch</li>
     </ol>
+</div>
+<div class="answers-section" style="margin-top: 20px; text-align: center;">
+    <button id="toggleAnswers"
+        style="padding: 8px 15px; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">Show
+        Answers</button>
+    <div id="answerList"
+        style="display: none; margin-top: 15px; text-align: left; max-width: 300px; margin-left: auto; margin-right: auto;">
+        <h3 style="text-align: center;">Answers</h3>
+        <p><strong>Across:</strong></p>
+        <ol>
+            <li>PARROT (1-6)</li>
+            <li>OWLS (7-10)</li>
+            <li>AVIAN (11-15)</li>
+        </ol>
+        <p><strong>Down:</strong></p>
+        <ol>
+            <li>PLOVER (1-6)</li>
+            <li>CARDINAL (2-7) </li>
+        </ol>
+    </div>
 </div>
 
 <script>
@@ -219,34 +239,73 @@
     }
 
 
-    var ploverIds = [11, 19, 30, 22, 31, 32];
-    var correctAnswers = {
-        11: "p",  // for the input at ID 11
-        19: "l",  // for the input at ID 12
-        30: "o",  // for the input at ID 13
-        22: "v",  // for the input at ID 14
-        31: "e",  // for the input at ID 15
-        32: "r",  // for the input at ID 16
+    var verticalWords = {
+        "plover": [11, 19, 30, 22, 31, 32],
+        "cardinal": [100, 24, 101, 102, 103, 104, 105, 106]
     };
 
     inputs.forEach(function (input) {
         input.addEventListener("input", function () {
-            // Get the current grid's ID
-            var gridId = input.closest("td").id;
+            // Check vertical words
+            for (const [word, ids] of Object.entries(verticalWords)) {
+                let allCorrect = true;
+                let currentLetters = "";
 
-            // Check if the input matches the correct answer for that grid
-            if (correctAnswers[gridId] && input.value.toLowerCase() === correctAnswers[gridId]) {
-                input.style.backgroundColor = "green";
-                input.disabled = true;
-            } else {
-                input.style.backgroundColor = "";
-                input.disabled = false;
+                // Check each letter in the vertical word
+                for (let i = 0; i < ids.length; i++) {
+                    const id = ids[i];
+                    const elem = document.getElementById(id.toString());
+                    if (elem) {
+                        const letter = elem.getElementsByTagName("input")[0].value.toLowerCase();
+                        currentLetters += letter;
+
+                        // If any letter is wrong or empty, mark as incorrect
+                        if (letter !== word[i] || letter === "") {
+                            allCorrect = false;
+                        }
+                    }
+                }
+
+                // Color all letters if whole word is correct
+                if (allCorrect && currentLetters.length === word.length) {
+                    ids.forEach(id => {
+                        const elem = document.getElementById(id.toString());
+                        if (elem) {
+                            elem.getElementsByTagName("input")[0].style.color = "green";
+                        }
+                    });
+                } else {
+                    // Only turn red if the word is complete but wrong
+                    if (currentLetters.length === word.length) {
+                        ids.forEach(id => {
+                            const elem = document.getElementById(id.toString());
+                            if (elem) {
+                                elem.getElementsByTagName("input")[0].style.color = "red";
+                            }
+                        });
+                    }
+                }
             }
         });
     });
 </script>
 
 
+<script>
+    // Toggle answer visibility
+    document.getElementById('toggleAnswers').addEventListener('click', function () {
+        const answerList = document.getElementById('answerList');
+        const button = document.getElementById('toggleAnswers');
+
+        if (answerList.style.display === 'none') {
+            answerList.style.display = 'block';
+            button.textContent = 'Hide Answers';
+        } else {
+            answerList.style.display = 'none';
+            button.textContent = 'Show Answers';
+        }
+    });
+</script>
 <style>
     .title {
         width: fit-content;
