@@ -13,6 +13,39 @@
 
 </head>
 
+<style>
+    .quotebox1 {
+        margin-left: 70px;
+        height: 730px;
+
+    }
+
+
+    .spotify {
+        display: none;
+    }
+
+    .music:hover {
+        cursor: pointer;
+        color: aquamarine;
+    }
+
+
+    .music {
+        position: absolute;
+        margin-bottom: -90px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .haiku {
+        width: fit-content;
+        margin-left: 600px;
+        margin-top: 63px;
+        position: absolute;
+    }
+</style>
+
 <body>
     <!-- JS -->
     <script src="../assets/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
@@ -26,7 +59,7 @@
 
     <main class="content">
         <h1>Issue 3: Pigeons</h1>
-        <div class="issue-date">Issue 03 • April 2025</div> 
+        <div class="issue-date">Issue 03 • April 2025</div>
 
         <div class="features-grid">
             <div class="feature-card">
@@ -113,30 +146,59 @@
     </main>
 
     <script src="../assets/js/my_js.js"></script>
-</body>
+    <div class="music">
+        <p>🎵 want to listen to some music? Click me!</p>
+    </div>
+    <iframe class="spotify" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4gwwSaxT65HpeJV4uDgcX4?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </script>
+    <footer class="footer bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <p class="rights-text">2025 Plumage. All rights reserved.</p>
 
-<footer class="footer bg-dark text-white mt-5 py-4">
-    <div class="container">
-        <p class="rights-text">2025 Plumage. All rights reserved.</p>
+            <p class="corp">
+                <a href="contact.html" class="text-white">Contact Us</a>
+            </p>
 
-        <p class="corp">
-            <a href="contact.html" class="text-white">Contact Us</a>
-        </p>
+            <a href="https://birds.haikubox.com/listen/3485189BD31C" class="haiku">Haikubox</a>
 
-        <div class="footer-links">
-            <div class="footer-one">
-                <a href="issue3.html" class="text-white">Current Issue</a>
-                <a href="contributors.html" class="text-white">Contributors</a>
-                <a href="allgames.html" class="text-white">Games</a>
-            </div>
+            <div class="footer-links">
+                <div class="footer-one">
+                    <a href="issue3.html" class="text-white">Current Issue</a>
+                    <a href="contributors.html" class="text-white">Contributors</a>
+                    <a href="allgames.html" class="text-white">Games</a>
+                </div>
 
-            <div class="footer-two">
-                <a href="Pigeon_Interview.html" class="text-white">Interview</a>
-                <a href="archive.html" class="text-white">Archives</a>
-                <a href="https://vip.gatech.edu/teams/vwx" class="text-white">VIP project</a>
+
+                <div class="footer-two">
+                    <a href="Pigeon_Interview.html" class="text-white">Interview</a>
+                    <a href="archive.html" class="text-white">Archives</a>
+                    <a href="https://vip.gatech.edu/teams/vwx" class="text-white">VIP project</a>
+                </div>
+
+
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
+    <script>
+        const music_button = document.querySelector(".music");
+        const spotify = document.querySelector(".spotify");
+
+        music_button.addEventListener("click", () => {
+            if (spotify.style.display === "block") {
+                spotify.style.display = "none";
+                music_button.innerHTML = "🎵 want to listen to some music? Click me!"
+            } else {
+                spotify.style.display = "block";
+                music_button.innerHTML = "  ❌"
+            }
+        });
+    </script>
+</body>
+
+
 
 </html>
