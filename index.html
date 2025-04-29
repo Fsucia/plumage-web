@@ -14,11 +14,37 @@
 </head>
 <style>
     .quotebox1 {
-   margin-left: 70px;
-   height: 730px;
+        margin-left: 70px;
+        height: 730px;
 
-}
+    }
+
+
+    .spotify {
+        display: none;
+    }
+
+    .music:hover {
+        cursor: pointer;
+        color: aquamarine;
+    }
+
+
+    .music {
+        position: absolute;
+        margin-bottom: -90px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .haiku {
+        width: fit-content;
+        margin-left: 600px;
+        margin-top: 63px;
+        position: absolute;
+    }
 </style>
+
 
 
 <body>
@@ -122,30 +148,48 @@
     </script>
 
 
-<main class="content">
-    <section class="quotebox1">
-        <p class="bird-quotes-2">
-            <strong>Plumage</strong> is an online magazine founded in 2024 by Stéphanie Boulard, Professor of Literature and Visual Arts at Georgia Tech, and edited by Georgia Tech students. Conceived as a site of interdisciplinary exploration, <em>Plumage</em> reflects on the manifold ways humans relate to birds—across global and local scales, from French and Francophone literature and visual arts to Atlanta’s ecosystems and scientific communities.
-        </p>
-        <p class="bird-quotes-2">
-            The magazine emerged from Professor Boulard’s <em>Birds in Arts and Media</em> Vertically Integrated Project (VIP), where students from diverse fields engaged with the question of what a shared fascination with birds might generate—artistically, critically, and scientifically.
-        </p>
-        <p class="bird-quotes-2">
-            Published in Fall and Spring semesters, <em>Plumage</em> gathers contributions from students across majors to illuminate birds’ cultural, ecological, and symbolic significance. In each issue, readers will encounter selections from renowned authors, students’ critical reflections addressing urgent contemporary concerns such as biodiversity loss and climate change, or creative contributions. Our explorations extend beyond literary and ecological spaces to include gaming, music, and other forms of media.
-        </p>
-        <p class="bird-quotes-2">
-            We are proud that <em>Plumage</em> stands at the forefront of a growing movement to bridge the arts, humanities, and sciences. It showcases the possibilities of interdisciplinary collaboration—fostering dialogue among students, faculty, and external experts, and revealing how the integration of STEM and the humanities can generate new modes of knowledge and creativity. Through collective work in analytical writing, critical theory, design, coding, translation, and literary criticism, <em>Plumage</em> offers not only a platform for scholarly and artistic engagement but also a space for imaginative inquiry into the human and more-than-human worlds.
-        </p>
-    </section>
+    <main class="content">
+        <section class="quotebox1">
+            <p class="bird-quotes-2">
+                <strong>Plumage</strong> is an online magazine founded in 2024 by Stéphanie Boulard, Professor of
+                Literature and Visual Arts at Georgia Tech, and edited by Georgia Tech students. Conceived as a site of
+                interdisciplinary exploration, <em>Plumage</em> reflects on the manifold ways humans relate to
+                birds—across global and local scales, from French and Francophone literature and visual arts to
+                Atlanta’s ecosystems and scientific communities.
+            </p>
+            <p class="bird-quotes-2">
+                The magazine emerged from Professor Boulard’s <em>Birds in Arts and Media</em> Vertically Integrated
+                Project (VIP), where students from diverse fields engaged with the question of what a shared fascination
+                with birds might generate—artistically, critically, and scientifically.
+            </p>
+            <p class="bird-quotes-2">
+                Published in Fall and Spring semesters, <em>Plumage</em> gathers contributions from students across
+                majors to illuminate birds’ cultural, ecological, and symbolic significance. In each issue, readers will
+                encounter selections from renowned authors, students’ critical reflections addressing urgent
+                contemporary concerns such as biodiversity loss and climate change, or creative contributions. Our
+                explorations extend beyond literary and ecological spaces to include gaming, music, and other forms of
+                media.
+            </p>
+            <p class="bird-quotes-2">
+                We are proud that <em>Plumage</em> stands at the forefront of a growing movement to bridge the arts,
+                humanities, and sciences. It showcases the possibilities of interdisciplinary collaboration—fostering
+                dialogue among students, faculty, and external experts, and revealing how the integration of STEM and
+                the humanities can generate new modes of knowledge and creativity. Through collective work in analytical
+                writing, critical theory, design, coding, translation, and literary criticism, <em>Plumage</em> offers
+                not only a platform for scholarly and artistic engagement but also a space for imaginative inquiry into
+                the human and more-than-human worlds.
+            </p>
+        </section>
 
-    <hr class="lines">
-    <div class="quotebox">
-        <p class="bird-quotes">Daily bird quote</p>
-        <p class="bird-quotes-2">"A bird does not sing because it has an answer, it sings because it has a song"</p>
-        <p class="bird-quotes-2">- Maya Angelou</p>
-    </div>
+        <hr class="lines">
+        <div class="quotebox">
+            <p class="bird-quotes">Daily bird quote</p>
+            <p class="bird-quotes-2">"A bird does not sing because it has an answer, it sings because it has a song"</p>
+            <p class="bird-quotes-2">- Maya Angelou</p>
+        </div>
 
-    <hr>
+        <hr>
+
         <i>Featured articles from the archives</i>
         <div class="features-grid">
 
@@ -209,8 +253,7 @@
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href="BOWP_History.html"><img
-                        src="issue2/image (1).png" alt="History"></a>
+                <a class="img-container" href="BOWP_History.html"><img src="issue2/image (1).png" alt="History"></a>
                 <a href="BOWP_History.html">
                     <h3>History of Birds in War </h3>
                 </a>
@@ -218,8 +261,7 @@
             </div>
 
             <div class="feature-card">
-                <a class="img-container" href="BOWP_Pop.html"><img
-                        src="issue2/trashdoves (1).png" alt="Art"></a>
+                <a class="img-container" href="BOWP_Pop.html"><img src="issue2/trashdoves (1).png" alt="Art"></a>
                 <a href="BOWP_Pop.html">
                     <h3>Birds in Pop Culture</h3>
                 </a>
@@ -236,6 +278,14 @@
             </div>
         </div>
     </main>
+    <div class="music">
+        <p>🎵 want to listen to some music? Click me!</p>
+    </div>
+    <iframe class="spotify" style="border-radius:12px"
+        src="https://open.spotify.com/embed/playlist/4gwwSaxT65HpeJV4uDgcX4?utm_source=generator" width="100%"
+        height="352" frameBorder="0" allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </script>
     <footer class="footer bg-dark text-white mt-5 py-4">
         <div class="container">
             <p class="rights-text">2025 Plumage. All rights reserved.</p>
@@ -244,6 +294,8 @@
                 <a href="contact.html" class="text-white">Contact Us</a>
             </p>
 
+            <a href="https://birds.haikubox.com/listen/3485189BD31C" class="haiku">Haikubox</a>
+
             <div class="footer-links">
                 <div class="footer-one">
                     <a href="issue3.html" class="text-white">Current Issue</a>
@@ -251,17 +303,36 @@
                     <a href="allgames.html" class="text-white">Games</a>
                 </div>
 
+
                 <div class="footer-two">
                     <a href="Pigeon_Interview.html" class="text-white">Interview</a>
                     <a href="archive.html" class="text-white">Archives</a>
                     <a href="https://vip.gatech.edu/teams/vwx" class="text-white">VIP project</a>
                 </div>
+
+
             </div>
         </div>
     </footer>
-    </script>
+
+
 
     <script src="assets/js/my_js.js"></script>
+
+    <script>
+        const music_button = document.querySelector(".music");
+        const spotify = document.querySelector(".spotify");
+
+        music_button.addEventListener("click", () => {
+            if (spotify.style.display === "block") {
+                spotify.style.display = "none";
+                music_button.innerHTML = "🎵 want to listen to some music? Click me!"
+            } else {
+                spotify.style.display = "block";
+                music_button.innerHTML = "  ❌"
+            }
+        });
+    </script>
 </body>
 
 </html>
