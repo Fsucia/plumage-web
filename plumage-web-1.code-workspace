@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "plumage-web-1",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}
